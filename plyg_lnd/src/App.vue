@@ -9,7 +9,9 @@
 import HelloWorld from './components/HelloWorld.vue';
 import style from './scss/app.scss';
 
+// use common global styles
 export default {
+  style,
   name: 'app',
   components: {
     HelloWorld,
