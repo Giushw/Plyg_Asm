@@ -1,0 +1,52 @@
+// // 01. SETTINGS
+// @import 'settings/settings.webfonts';
+// @import 'settings/settings.global';
+// @import 'settings/settings.colors';
+
+// // 02. TOOLS
+// @import 'tools/tools.mixins';
+
+// // 03. GENERIC
+// @import 'generic/sanitize';
+// @import 'generic/generic.resets';
+
+// // 04. ELEMENTS
+// @import 'elements/elements.body';
+// @import 'elements/elements.buttons';
+// @import 'elements/elements.forms';
+// @import 'elements/elements.inputs';
+// @import 'elements/elements.typographies';
+// @import 'elements/elements.lists';
+
+// // 05. OBJECTS
+// @import 'objects/objects.layout';
+// @import 'objects/objects.buttons';
+// @import 'objects/objects.pictures';
+// @import 'objects/objects.inputs';
+// @import 'objects/objects.typography';
+// @import 'objects/objects.single-view';
+// @import 'objects/objects.errors';
+
+// // 06. COMPONENTS
+// @import 'components/component.overlay-block';
+// @import 'components/component.error-modal';
+// @import 'components/components.header';
+// @import 'components/components.login-forgot-view';
+// @import 'components/components.home-view';
+// @import 'components/components.menu-custom-view';
+// @import 'components/components.notifications';
+// @import 'components/component.editorial-plan-view';
+// @import 'components/components.layout-config';
+// @import 'components/components.editorial-config';
+
+// // 07. UTILITIES
+// @import 'utilities/utilities.global.variants';
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
