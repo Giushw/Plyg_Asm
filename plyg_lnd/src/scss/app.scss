@@ -1,3 +1,7 @@
+/**
+* ITCSS Structure
+*/
+
 // 01 Setting
 @import 'settings/settings.webfonts';
 @import 'settings/settings.global';
@@ -10,7 +14,7 @@
 @import 'generic/sanitize';
 @import 'generic/generic.resets';
 
-// 04. ELEMENTS
+// 04 Elements
 // @import 'elements/elements.body';
 // @import 'elements/elements.buttons';
 // @import 'elements/elements.forms';
@@ -18,7 +22,7 @@
 // @import 'elements/elements.typographies';
 // @import 'elements/elements.lists';
 
-// 05. OBJECTS
+// 05 Objects
 // @import 'objects/objects.layout';
 // @import 'objects/objects.buttons';
 // @import 'objects/objects.pictures';
@@ -27,7 +31,7 @@
 // @import 'objects/objects.single-view';
 // @import 'objects/objects.errors';
 
-// 06. COMPONENTS
+// 06 Components
 // @import 'components/component.overlay-block';
 // @import 'components/component.error-modal';
 // @import 'components/components.header';
@@ -39,7 +43,7 @@
 // @import 'components/components.layout-config';
 // @import 'components/components.editorial-config';
 
-// 07. UTILITIES
+// 07 Utilities
 // @import 'utilities/utilities.global.variants';
 
 #app {
