@@ -1,0 +1,14 @@
+/**
+* Body
+*/
+
+html,
+body {
+  background: $color__background;
+  color: $color__text;
+  font-family: $font__base;
+  font-size: $font__size--base;
+  line-height: $line-height--base;
+  letter-spacing: normal;
+  min-height: 100%;
+}

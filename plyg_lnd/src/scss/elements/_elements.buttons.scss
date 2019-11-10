@@ -1,0 +1,48 @@
+button, .__btn {
+  display: block;
+  font-family: $font__main;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: .1em;
+  font-weight: 500;
+  padding: 1.335em 1em;
+  border: 1px solid $color__main;
+  color: $color__background;
+  background-color: $color__main;
+  width: 100%;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+
+  &.-small {
+    padding: 1em;
+    font-size: 0.6875em;
+  }
+
+  .-inverted & {
+    color: $color__background;
+    background-color: $color__main;
+
+    &:hover {
+      outline: 1px solid;
+    }
+  }
+
+  &:not(.-inverted, .-outline):hover {
+    background-color: lighten($color: $color__main, $amount: 20);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled] {
+    opacity: .2;
+
+    &:hover {
+      outline: none;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// ******************************
+// INPUTS
+// common inputs resets and style
+// ******************************
+
+input {
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.5rem;
+  border-radius: .2em;
+  border: 1px solid darken($color__accent, 4);
+
+  &:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+}
