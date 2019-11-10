@@ -1,0 +1,50 @@
+.single-view {}
+
+.single-header {
+  display: flex;
+  padding-bottom: 24px;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  & .logo-picture {
+    &.-vivaticket {
+      & .__img {
+        width: 250px;
+      }
+    }
+  }
+}
+
+.single-body {
+  padding: 45px 40px;
+  background: $color__background;
+  box-shadow: 0px 0px 10px 5px rgba($color__gray--dark,1);
+
+  & .router-link {
+    text-align: center;
+  }
+
+  & .checkbox-obj {
+    align-items: center;
+  }
+
+  & .form-messages {
+    margin-top: 20px;
+  }
+}
+
+.form-group {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & > .__title {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  & > .__btn {  
+    margin: 30px 0;
+  }
+}

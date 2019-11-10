@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <MainLayout msg="TEst Landing in Vue.js App"/>
   </div>
 </template>

@@ -1,14 +1,22 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="page-wrap">
+    <PageHeader/>
+    <PageContent/>
+    <PageFooter/>
   </div>
 </template>
 
 <script>
+import PageHeader from './header/PageHeader.vue';
+import PageContent from './content/PageContent.vue';
+import PageFooter from './footer/PageFooter.vue';
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
+  name: 'MainLayout',
+  components: {
+    PageHeader,
+    PageContent,
+    PageFooter,
   },
 };
 </script>
