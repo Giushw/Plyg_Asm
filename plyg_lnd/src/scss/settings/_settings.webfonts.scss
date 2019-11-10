@@ -2,51 +2,20 @@
 * Fonts
 */
 
-// @font-face {
-//   font-family: 'Brandon Grotesque Web';
-//   font-weight: normal;
-//   src: url('../assets/webfonts/brandonGrotesque/brandon_grotesque_web_bold-webfont.woff2') format('woff2'),
-//   url('../assets/webfonts/brandonGrotesque/brandon_grotesque_web_regular-webfont.woff') format('woff'),
-//   ;
-// }
-// @font-face {
-//   font-family: 'Brandon Grotesque Web';
-//   font-weight: 500;
-//   src: url('../assets/webfonts/brandonGrotesque/brandon_grotesque_web_medium-webfont.woff2') format('woff2'),
-//     url('../assets/webfonts/brandonGrotesque/brandon_grotesque_web_medium-webfont.woff') format('woff');
-// }
+@font-face {
+  font-family: 'Gotham';
+  font-weight: normal;
+  src: url('../assets/fonts/gotham/Gotham-Book.otf') format('opentype');
+}
 
-// @font-face {
-//   font-family: 'Brandon Grotesque Web';
-//   font-weight: 700;
-//   src: url('../assets/webfonts/brandonGrotesque/brandon_grotesque_web_bold-webfont.woff2') format('woff2'),
-//     url('../assets/webfonts/brandonGrotesque/brandon_grotesque_web_bold-webfont.woff') format('woff');
-// }
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 500;
+  src: url('../assets/fonts/gotham/Gotham-Medium.otf') format('opentype');
+}
 
-// @font-face {
-//   font-family: 'Roboto';
-//   font-weight: 300;
-//   src: url('../assets/webfonts/roboto/roboto-light.woff2') format('woff2'),
-//     url('../assets/webfonts/roboto/roboto-light.woff') format('woff');
-// }
-
-// @font-face {
-//   font-family: 'Roboto';
-//   font-weight: 400;
-//   src: url('../assets/webfonts/roboto/roboto-regular.woff2') format('woff2'),
-//     url('../assets/webfonts/roboto/roboto-regular.woff') format('woff');
-// }
-
-// @font-face {
-//   font-family: 'Roboto';
-//   font-weight: 500;
-//   src: url('../assets/webfonts/roboto/roboto-medium.woff2') format('woff2'),
-//     url('../assets/webfonts/roboto/roboto-medium.woff') format('woff');
-// }
-
-// @font-face {
-//   font-family: 'Roboto';
-//   font-weight: 700;
-//   src: url('../assets/webfonts/roboto/roboto-bold.woff2') format('woff2'),
-//     url('../assets/webfonts/roboto/roboto-bold.woff') format('woff');
-// }
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 700;
+  src: url('../assets/fonts/gotham/Gotham-Bold.otf') format('opentype');
+}
