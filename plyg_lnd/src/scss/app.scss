@@ -16,7 +16,7 @@
 
 // 04 Elements
 @import 'elements/elements.body';
-// @import 'elements/elements.buttons';
+@import 'elements/elements.buttons';
 // @import 'elements/elements.forms';
 // @import 'elements/elements.inputs';
 @import 'elements/elements.typographies';
@@ -32,6 +32,7 @@
 
 // 06 Components
 @import 'components/components.header';
+@import 'components/components.cookie';
 
 // 07 Utilities
 @import 'utilities/utilities.global.variants';

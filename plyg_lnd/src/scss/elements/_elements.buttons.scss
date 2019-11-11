@@ -1,3 +1,7 @@
+/**
+* Button
+*/
+
 button, .__btn {
   display: block;
   font-family: $font__main;
@@ -5,32 +9,26 @@ button, .__btn {
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1;
-  letter-spacing: .1em;
   font-weight: 500;
   padding: 1.335em 1em;
   border: 1px solid $color__primary;
   color: $color__secondary;
   background-color: $color__primary;
-  width: 100%;
   transition: all .2s ease-in-out;
   cursor: pointer;
+
+  &:hover {
+    color: $color__primary;
+    background-color: $color__secondary;
+  }
 
   &.-small {
     padding: 1em;
     font-size: 0.6875em;
   }
 
-  .-inverted & {
-    color: $color__secondary;
-    background-color: $color__primary;
-
-    &:hover {
-      outline: 1px solid;
-    }
-  }
-
-  &:not(.-inverted, .-outline):hover {
-    background-color: lighten($color: $color__primary, $amount: 20);
+  &.-full {
+    width: 100%;
   }
 
   &:focus {

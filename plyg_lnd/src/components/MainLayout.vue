@@ -3,6 +3,7 @@
     <PageHeader/>
     <PageContent/>
     <PageFooter/>
+    <Cookies/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import PageHeader from './header/PageHeader.vue';
 import PageContent from './content/PageContent.vue';
 import PageFooter from './footer/PageFooter.vue';
+import Cookies from './common/cookie-policy.vue';
 
 export default {
   name: 'MainLayout',
@@ -17,6 +19,7 @@ export default {
     PageHeader,
     PageContent,
     PageFooter,
+    Cookies,
   },
 };
 </script>
