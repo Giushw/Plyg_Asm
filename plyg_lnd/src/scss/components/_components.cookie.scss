@@ -2,29 +2,36 @@
 * Cookie
 */
 
-.cookie-wrapper {
-  position: absolute;
+.cookie-container {
+  position: fixed;
   bottom: 0;
   left: 0;
   z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   background-color: $color__secondary;
-  padding: 10px;
   transition: visibility 0.5s 1s, opacity 1s ease-in-out;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.cookie-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: $grid-max-width;
+  padding: 10px;
+  
 
   & > .__btn {
     width: 100px;
     height: 30px;
     padding: 8px;
     font-size: 10px;
-  }
-
-  &.is-hidden {
-    visibility: hidden;
-    opacity: 0;
   }
 }
 

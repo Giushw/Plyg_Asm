@@ -1,39 +1,16 @@
 <template>
   <section class="page-content">
-  <carousel :per-page="1"
-    :navigationEnabled="true"
-    :loop="true"
-  >
-      <slide>
-        <picture class="">
-          <img src="../../assets/images/slide-hello.jpg"
-            alt="Hello Slide"
-            class="__img"
-          >
-        </picture>
-      </slide>
-      <slide>
-        <picture class="">
-          <img src="../../assets/images/slide-circle.jpg"
-            alt="Circle Slide"
-            class="__img"
-          >
-        </picture>
-      </slide>
-      <slide>
-        <picture class="">
-          <img src="../../assets/images/slide-play.jpg"
-            alt="Play Slide"
-            class="__img"
-          >
-        </picture>
-      </slide>
-    </carousel>
+    <slideshow/>
   </section>
 </template>
 
 <script>
+import slideshow from './slideshow.vue';
+
 export default {
   name: 'PageContent',
+  components: {
+    slideshow,
+  },
 };
 </script>

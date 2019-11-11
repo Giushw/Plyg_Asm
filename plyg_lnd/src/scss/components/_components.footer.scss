@@ -41,13 +41,23 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.social-link {
   font-size: 20px;
 
   & > .__icon {
     color: $color__text--dark;
     margin-right: 15px;
+    transition: color 0.5s ease-in-out;
 
-    &:last-child {
+    &:hover {
+      color: $color__secondary;
+    }
+  }
+
+  &:last-child {
+    & > .__icon {
       margin: 0;
     }
   }

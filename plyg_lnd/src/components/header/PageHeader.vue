@@ -1,6 +1,7 @@
 <template>
   <header class="page-header">
-    <picture class="header-logo">
+    <div class="header-wrapper">
+      <picture class="header-logo">
       <img src="../../assets/images/logo-playground-white.png" alt="Playground Logo" class="__img">
     </picture>
     <nav class="header-nav">
@@ -19,6 +20,7 @@
         </li>
       </ul>
     </nav>
+    </div>
   </header>
 </template>
 
