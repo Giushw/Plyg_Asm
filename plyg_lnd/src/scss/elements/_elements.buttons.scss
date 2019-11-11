@@ -3,15 +3,16 @@
 */
 
 button, .__btn {
-  display: block;
-  font-family: $font__main;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
+  padding: 1.335em 1em;
+  border: 1px solid $color__primary;
+  font-family: $font__main;
   text-decoration: none;
   line-height: 1;
   font-weight: 500;
-  padding: 1.335em 1em;
-  border: 1px solid $color__primary;
   color: $color__secondary;
   background-color: $color__primary;
   transition: all .2s ease-in-out;
@@ -23,6 +24,7 @@ button, .__btn {
   }
 
   &.-small {
+    font-weight: normal;
     padding: 1em;
     font-size: 0.6875em;
   }

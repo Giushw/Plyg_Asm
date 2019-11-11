@@ -3,6 +3,7 @@ import Siema from 'vue2-siema';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUserSecret, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 import App from './App.vue';
 import './registerServiceWorker';
 

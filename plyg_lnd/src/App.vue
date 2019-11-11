@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <MainLayout msg="TEst Landing in Vue.js App"/>
+  <div id="app" class="page-container">
+    <MainLayout/>
   </div>
 </template>
 

@@ -12,7 +12,7 @@ $page-header-height: 70px;
 $subMenu-height : 56px;
 
 .page-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0; // necessary for IE
   width: 100%;

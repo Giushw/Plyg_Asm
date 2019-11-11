@@ -172,11 +172,18 @@
 */
 
 // Page Layout
+.page-container {
+  background-color: $color__primary;
+}
+
 .page-wrap {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: $grid-max-width;
   height: 100vh;
 }
 
@@ -185,6 +192,7 @@
   width: 100%;
   flex: 0 0 auto;
 }
+
 /*
 // Grid
 .grid-block {
