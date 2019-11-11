@@ -32,6 +32,8 @@
   margin-right: 30px;
 
   & > .__link {
-    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

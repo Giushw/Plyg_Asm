@@ -16,8 +16,6 @@
         </li>
         <li class="__item">
           contact us
-          <font-awesome-icon icon="user-secret"></font-awesome-icon>
-          <font-awesome-icon icon="circle-notch"></font-awesome-icon>
         </li>
       </ul>
     </nav>

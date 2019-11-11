@@ -1,17 +1,23 @@
 import Vue from 'vue';
-import Siema from 'vue2-siema';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserSecret, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
+import { faComment } from '@fortawesome/free-regular-svg-icons';
+import { faFacebookSquare, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import App from './App.vue';
 import './registerServiceWorker';
 
-library.add(faUserSecret, faCircleNotch);
+library.add(
+  faCircleNotch,
+  faComment,
+  faFacebookSquare,
+  faLinkedinIn,
+  faInstagram,
+);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
-Vue.use(Siema);
 
 new Vue({
   render: h => h(App),
