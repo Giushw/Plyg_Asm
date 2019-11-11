@@ -1,0 +1,28 @@
+/**
+* Cookie
+*/
+
+.cookie-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $color__secondary;
+  padding: 10px;
+
+  & > .__btn {
+
+  }
+}
+
+.cookie-disclaimer {
+  margin-right: 30px;
+
+  & > .__link {
+    
+  }
+}
