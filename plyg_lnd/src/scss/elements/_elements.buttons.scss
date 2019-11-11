@@ -8,9 +8,9 @@ button, .__btn {
   letter-spacing: .1em;
   font-weight: 500;
   padding: 1.335em 1em;
-  border: 1px solid $color__main;
-  color: $color__background;
-  background-color: $color__main;
+  border: 1px solid $color__primary;
+  color: $color__secondary;
+  background-color: $color__primary;
   width: 100%;
   transition: all .2s ease-in-out;
   cursor: pointer;
@@ -21,8 +21,8 @@ button, .__btn {
   }
 
   .-inverted & {
-    color: $color__background;
-    background-color: $color__main;
+    color: $color__secondary;
+    background-color: $color__primary;
 
     &:hover {
       outline: 1px solid;
@@ -30,7 +30,7 @@ button, .__btn {
   }
 
   &:not(.-inverted, .-outline):hover {
-    background-color: lighten($color: $color__main, $amount: 20);
+    background-color: lighten($color: $color__primary, $amount: 20);
   }
 
   &:focus {

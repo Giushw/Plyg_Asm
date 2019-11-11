@@ -1,0 +1,23 @@
+/**
+* Lists
+*/
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.-vertical {
+    flex-direction: column;
+  }
+
+  & > .__item {
+    padding: 5px;
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $color__gray;
+    }
+  }
+}
+

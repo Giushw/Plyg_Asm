@@ -96,7 +96,7 @@ input {
   }
 
   &:focus {
-    border-color: $color__main;
+    border-color: $color__primary;
     outline: none;
   }
 
@@ -215,7 +215,7 @@ input {
   background-color: $color__gray--light !important;
   // background: url('/assets/images/icons/arrow_down--small.png') right 12px center no-repeat;
   border-radius: 2px;
-  border: 1px solid $color__main;
+  border: 1px solid $color__primary;
   font-size: 0.875em;
   text-transform: uppercase;
   line-height: unset;
@@ -380,7 +380,7 @@ input {
         </div>
       </div>
     </div> <!-- Do not copy this div -->
-    <div style="background:$color__main; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
+    <div style="background:$color__primary; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
       <div class="checkbox-wrapper">
         <div class="checkbox-obj">
           <div class="checkbox-group">
@@ -403,7 +403,7 @@ input {
         </div>
       </div>
     </div> <!-- Do not copy this div -->
-    <div style="background:$color__main; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
+    <div style="background:$color__primary; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
       <div class="checkbox-wrapper">
         <div class="checkbox-obj -inverted">
           <div class="checkbox-group">
@@ -443,17 +443,17 @@ input {
   
   &.-inverted {
     & > .__text {
-      color: $color__background;
+      color: $color__secondary;
     }
 
     & > .checkbox-group {
       & > .__input {
         &+.checkbox-label {
-          border-color: $color__background;
+          border-color: $color__secondary;
 
           & > .checkbox-svg {
             & > .__path {
-              stroke: $color__background;
+              stroke: $color__secondary;
             }
           }
         }
@@ -462,7 +462,7 @@ input {
   }
 
   & > .__text {
-    color: $color__main;
+    color: $color__primary;
     font-family: $font__base;
     font-weight: 400;
     font-size: 0.75rem;
@@ -492,7 +492,7 @@ input {
 
     & + .checkbox-label {
       display: block;
-      border: 2px solid $color__main;
+      border: 2px solid $color__primary;
       width: 20px;
       height: 20px;
       border-radius: 0;
@@ -505,7 +505,7 @@ input {
 
         & > .__path {
           fill: none;
-          stroke: $color__main;
+          stroke: $color__primary;
           stroke-width: 5px;
           stroke-linecap: round;
           stroke-linejoin: round;
@@ -570,7 +570,7 @@ input {
         </div>
       </div>
     </div> <!-- Do not copy this div -->
-    <div style="background:$color__main; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
+    <div style="background:$color__primary; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
       <div class="radio-wrapper">
         <div class="radio-obj">
           <div class="radio-group">
@@ -589,7 +589,7 @@ input {
         </div>
       </div>
     </div> <!-- Do not copy this div -->
-    <div style="background:$color__main; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
+    <div style="background:$color__primary; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
       <div class="radio-wrapper ">
         <div class="radio-obj -inverted">
           <div class="radio-group">
@@ -623,24 +623,24 @@ input {
 
   &.-inverted {
     & >.__text {
-      color: $color__background;
+      color: $color__secondary;
     }
 
     & > .radio-group {
       & > .__input {
         &:checked+.radio-label::after {
-          background: $color__background;
+          background: $color__secondary;
         }
 
         &+.radio-label {
-          border-color: $color__background;
+          border-color: $color__secondary;
         }
       }
     }
   }
 
   & > .__text {
-    color: $color__main;
+    color: $color__primary;
     font-family: $font__base;
     font-weight: 400;
     font-size: 0.75rem;
@@ -661,7 +661,7 @@ input {
     height: 20px;
 
     &:checked+.radio-label::after {
-      background: $color__main;
+      background: $color__primary;
     }
 
     &:disabled+.radio-label{
@@ -673,7 +673,7 @@ input {
     & + .radio-label {
       display: block;
       position: relative;
-      border: 2px solid $color__main;
+      border: 2px solid $color__primary;
       width: 20px;
       height: 20px;
       border-radius: 50%;
@@ -748,7 +748,7 @@ input {
         </div>
       </div>
     </div> <!-- Do not copy this div -->
-    <div style="background:$color__main; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
+    <div style="background:$color__primary; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
       <div class="radio-wrapper">
         <div class="radio-obj">
           <div class="radio-group">
@@ -767,7 +767,7 @@ input {
         </div>
       </div>
     </div> <!-- Do not copy this div -->
-    <div style="background:$color__main; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
+    <div style="background:$color__primary; width: 100%; padding: 20px;"> <!-- Do not copy this div -->
       <div class="radio-wrapper ">
         <div class="radio-obj -inverted">
           <div class="radio-group">
@@ -853,7 +853,7 @@ $toggle-height--big: 40px;
   line-height: 14px;
 
   & > .__text {
-    color: $color__main;
+    color: $color__primary;
     font-family: $font__base;
     font-weight: 400;
     font-size: 0.75rem;
@@ -871,7 +871,7 @@ $toggle-height--big: 40px;
 
     &:checked {
       +.toggle-label {
-        background-color: $color__background--dark;
+        background-color: $color__secondary--dark;
 
         & > .__handler {
           transform: translate3d(36.75px, 0, 0);
@@ -886,7 +886,7 @@ $toggle-height--big: 40px;
   display: inline-block;
   width: $toggle-width;
   height: $toggle-height;
-  background-color: $color__background;
+  background-color: $color__secondary;
   border: 1px solid $color__gray--dark;
   border-radius: 50px;
   transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -899,7 +899,7 @@ $toggle-height--big: 40px;
     left: 3px;
     width: $toggle-height - 6;
     height: $toggle-height - 6;
-    background-color: $color__background;
+    background-color: $color__secondary;
     border-radius: 50px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);

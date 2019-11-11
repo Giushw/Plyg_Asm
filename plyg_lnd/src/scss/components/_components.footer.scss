@@ -15,9 +15,9 @@ $page-footer-height: 70px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: $color__main;
-  color: $color__background;
-  box-shadow: -1100px 0 0 0 $color__main, 1100px 0 0 0 $color__main;
+  background-color: $color__primary;
+  color: $color__secondary;
+  box-shadow: -1100px 0 0 0 $color__primary, 1100px 0 0 0 $color__primary;
 }
 
 .footer-scrollTop {
@@ -144,7 +144,7 @@ $page-footer-height: 70px;
     padding-top: 0;
     padding-bottom: 15px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $color__background;
+    border-bottom: 1px solid $color__secondary;
   }
 
   @include on-mobile {
@@ -183,7 +183,7 @@ $page-footer-height: 70px;
 
       @include on-desktop {
         padding-bottom: 15px;
-        border-bottom: 1px solid $color__background;
+        border-bottom: 1px solid $color__secondary;
         margin-bottom: 25px;
       }
     }
@@ -208,7 +208,7 @@ $page-footer-height: 70px;
     width: 25%;
     height: 100%;
     border-radius: 3px;
-    background-color: $color__background;
+    background-color: $color__secondary;
     will-change: transform;
     transition: transform 0.5s ease-in-out;
     transform: rotate(0deg);
@@ -228,7 +228,7 @@ $page-footer-height: 70px;
     width: 100%;
     height: 25%;
     border-radius: 3px;
-    background-color: $color__background;
+    background-color: $color__secondary;
     will-change: transform;
     transition: transform 0.5s ease-in-out;
     transform: rotate(0deg);
@@ -305,13 +305,13 @@ $page-footer-height: 70px;
 
     & > .-link {
       font-family: $font__main;
-      color: $color__background;
+      color: $color__secondary;
       text-decoration: none;
-      border-bottom: 1px solid $color__main;
+      border-bottom: 1px solid $color__primary;
       transition: border-color 0.5s ease-in-out;
 
       &:hover {
-        border-color: $color__background;
+        border-color: $color__secondary;
       }
     }
   }
@@ -322,7 +322,7 @@ $page-footer-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $color__background;
+  background-color: $color__secondary;
 
   & > .__input {
     border: none;
@@ -332,7 +332,7 @@ $page-footer-height: 70px;
 }
 
 .newsletter-cta {
-  background: $color__main;
+  background: $color__primary;
   transition: background-color 0.3s ease-in-out;
   width: 17%;
   border: 2px solid $color__gray--light;
@@ -462,7 +462,7 @@ $page-footer-height: 70px;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-end;
-  color: $color__background;
+  color: $color__secondary;
   text-align: right;
 
   @include on-desktop {
@@ -503,7 +503,7 @@ $page-footer-height: 70px;
   flex-direction: column;
   width: 100%;
   min-height: $page-footer-height;
-  background: $color__main;
+  background: $color__primary;
 
   & > .grid-block {
     min-height: $page-footer-height;

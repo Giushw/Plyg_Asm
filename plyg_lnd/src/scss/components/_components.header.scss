@@ -1,7 +1,6 @@
-// *************************
-// HEADER
-// component specific styles
-// *************************
+/**
+* Header
+*/
 
 // Variables
 // for burger menu animation
@@ -17,39 +16,43 @@ $subMenu-height : 56px;
   top: 0;
   left: 0; // necessary for IE
   width: 100%;
-  z-index: 100;
-  background: $color__main;
-  padding: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 150px;
+  background: rgba(00, 00, 00, 0.5);
+}
 
-  & .__overlay {
-    position: absolute;
-    display: none;
+.header-logo {
+  display: flex;
+  width: 150px;
+  height: 22px;
+
+  & > .__img {
     width: 100%;
-    height: 100vh;
-    background: rgba(00, 00, 00, 0.8);
-    z-index: 180;
-    pointer-events: all;
-
-    &.is-open {
-      display: flex;
-    }
+    height: 100%;
   }
+}
 
-  .is-homepage & {
-    @include on-desktop {
-      position: relative;
-    }
+.header-nav {
+  display: flex;
 
-    @include on-tablet {
-      position: relative;
+  & .navigation-list {
+    color: $color__secondary;
+
+    & > .__item {
+      padding: 0 30px;
+      cursor: pointer;
     }
   }
 }
 
+
+/*
 .header-main {
   position: relative;
   z-index: 170;
-  background-color: $color__main;
+  background-color: $color__primary;
 }
 
 .main-block {
@@ -68,7 +71,7 @@ $subMenu-height : 56px;
   left: -5px;
   z-index: 190;
   padding: 15px;
-  background: $color__main;
+  background: $color__primary;
   will-change: transform;
   transition: transform 0.5s ease-in-out;
 
@@ -105,7 +108,7 @@ $subMenu-height : 56px;
   &>.__line {
     position: absolute;
     left: 0;
-    background-color: $color__background;
+    background-color: $color__secondary;
     height: $line-size;
     width: 100%;
     border-radius: 3px;
@@ -185,7 +188,7 @@ $subMenu-height : 56px;
   top: 0;
   right: 0;
   min-height: $page-header-height;
-  color: $color__background;
+  color: $color__secondary;
   text-transform: uppercase;
 
   @include on-tablet {
@@ -205,7 +208,7 @@ $subMenu-height : 56px;
   transition: background-color 0.5s ease-in-out;
 
   &>.__subtitle {
-    color: $color__background;
+    color: $color__secondary;
   }
 
   @include on-desktop {
@@ -271,7 +274,7 @@ $subMenu-height : 56px;
   & > .__subtitle {
     margin: 0;
     padding: 0 .4em;
-    color: $color__background;
+    color: $color__secondary;
 
     &:hover {
       text-decoration: underline;
@@ -312,8 +315,8 @@ $subMenu-height : 56px;
   }
 
   & .timer {
-    background-color: $color__background;
-    color: $color__main;
+    background-color: $color__secondary;
+    color: $color__primary;
     font-size: .85rem;
     padding: .3em .6em;
     border-radius: .6em;
@@ -333,8 +336,8 @@ $subMenu-height : 56px;
     width: 15px;
     height: 15px;
     text-align: center;
-    background-color: $color__background;
-    color: $color__main;
+    background-color: $color__secondary;
+    color: $color__primary;
     font-size: .75rem;
     border-radius: 50%;
   }
@@ -379,13 +382,13 @@ $subMenu-height : 56px;
 
   @include on-tablet {
     display: block;
-    background: $color__background;
+    background: $color__secondary;
     width: 100%;
   }
 
   @include on-desktop {
     display: block;
-    background: $color__background;
+    background: $color__secondary;
     width: 100%;
   }
 }
@@ -427,7 +430,7 @@ $subMenu-height : 56px;
       font-family: $font__main;
       width: 100%;
       padding: 20px 0 17px 0;
-      border-bottom: 3px solid $color__background;
+      border-bottom: 3px solid $color__secondary;
       transition: border-color 0.5s ease-in-out;
 
       @include on-tablet {
@@ -435,12 +438,12 @@ $subMenu-height : 56px;
       }
 
       &:hover {
-        border-color: $color__main;
+        border-color: $color__primary;
         text-decoration: none;
       }
 
       &.-active {
-        border-color: $color__main;
+        border-color: $color__primary;
         text-decoration: none;
       }
     }
@@ -498,7 +501,7 @@ $subMenu-height : 56px;
   height: 109%;
   display: flex;
   justify-content: space-between;
-  background: $color__background;
+  background: $color__secondary;
   will-change: border;
 
   @include on-mobile {
@@ -506,7 +509,7 @@ $subMenu-height : 56px;
   }
 
   &:focus-within {
-    border: 1px solid $color__main;
+    border: 1px solid $color__primary;
   }
 
   &.is-searching {
@@ -547,7 +550,7 @@ $subMenu-height : 56px;
   width: 15%;
   height: 100%;
   padding: 10px;
-  background: $color__background;
+  background: $color__secondary;
   border-width: 0;
   border-radius: 0;
   opacity: .5;
@@ -636,7 +639,7 @@ $subMenu-height : 56px;
   max-height: 0;
   overflow: hidden;
   padding: 0 20px;
-  background-color: $color__background;
+  background-color: $color__secondary;
   will-change: max-height;
   transition: max-height 0.5s ease-in-out;
 
@@ -649,7 +652,7 @@ $subMenu-height : 56px;
 
   .is-focused & {
     &.is-searching {
-      border-color: $color__main;
+      border-color: $color__primary;
     }
   }
 
@@ -711,7 +714,7 @@ $subMenu-height : 56px;
   display: none;
   justify-content: flex-start;
   align-items: flex-start;
-  background: $color__background;
+  background: $color__secondary;
   z-index: 180;
 
   @include on-mobile {
@@ -926,7 +929,7 @@ $subMenu-height : 56px;
   align-content: space-between;
   position: absolute;
   z-index: 200;
-  background: $color__background;
+  background: $color__secondary;
   top: 0;
   left: -100%;
   will-change: left;
@@ -1077,7 +1080,7 @@ $subMenu-height : 56px;
 .corporate-header {
   position: relative;
   width: 100%;
-  background: $color__main;
+  background: $color__primary;
 }
 
 .header-mobSearch {
@@ -1110,3 +1113,4 @@ $subMenu-height : 56px;
   top:0;
   width: 100%;
 }
+*/

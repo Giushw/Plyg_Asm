@@ -1,88 +1,11 @@
-/**
-* <p>
-*   Settings that manage Paragraphs styles.
-*   This rules can be overwrittend by components, but only if necessary.<br/>
-*   Use class **-small** to decrease font size to 12px.
-*   Text enhancement will be given with strong tag.
-* </p>
-* <p>See _objects.typography.scss</p>
-* @example
-<div style="padding:20px">
-  <p>
-    <strong>This is a common paragraph with default size 16px</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Magna eget est lorem ipsum dolor sit. Interdum posuere lorem ipsum dolor sit amet. 
-    Tincidunt ornare massa eget egestas purus viverra accumsan in. Mattis nunc sed blandit libero. 
-    Eget lorem dolor sed viverra. Turpis cursus in hac habitasse. Id velit ut tortor pretium viverra suspendisse. 
-    Tempor nec feugiat nisl pretium fusce id. Lobortis feugiat vivamus at augue eget arcu. Scelerisque purus semper eget duis.
-  </p>
-</div>
-<div style="padding:20px">
-  <p class="-small">
-    <strong>This is a small paragraph, with font size 12px, setup via class variant -small</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Magna eget est lorem ipsum dolor sit. Interdum posuere lorem ipsum dolor sit amet. 
-    Tincidunt ornare massa eget egestas purus viverra accumsan in. Mattis nunc sed blandit libero. 
-    Eget lorem dolor sed viverra. Turpis cursus in hac habitasse. Id velit ut tortor pretium viverra suspendisse. 
-    Tempor nec feugiat nisl pretium fusce id. Lobortis feugiat vivamus at augue eget arcu. Scelerisque purus semper eget duis.
-  </p>
-</div>
-* @section Paragraphs
-* @page Typography
-*/
 
 // Paragraphs
 p {
-  margin: 0;
-
   &.-small {
     font-size: 0.75rem;
   }
 }
 
-/** 
-* <p>Settings that manage Titles or Heading styles.<br/>
-*  Use class **__title** on any h element to get the default title size.<br/>
-*  On an h element with **__title** class use any variant between **-small**, **-big**, **-huge** or **-massive** to ignore default size and set appropriate dimensions.<br/>
-*  Note that variant **-massive** can be applied to an h element also without class **__title**.
-* </p>
-* <p>See _objects.typography.scss</p>
-* @example
-<div class="random-component">
-  <!-- Default titles doesn't require any class -->
-  <h1 class="-massive">
-    This is a massive h1!!!
-  </h1>
-  <h1>
-    This is a huge title!!
-  </h1>
-  <h2>
-    This is a big title!
-  </h2>
-  <h3>
-    This is a default title
-  </h3>
-  <h4>
-    This is a small title
-  </h4>
-  <!-- Examples of titles with class __title and size variants -->
-  <h1 class="__title -small">
-    This is a small h1
-  </h1>
-  <h2 class="__title">
-    This is a default h2
-  </h2>
-  <h3 class="__title -big">
-    This is a big h3!
-  </h3>
-  <h4 class="__title -huge">
-    This is a huge h4!!!
-  </h4>
-  <h5 class="__title -massive">
-    This is a massive h5!!!
-  </h5>
-</div>
-* @section Titles
-* @page Typography
-*/
 
 // Titles
 .__title {
@@ -102,38 +25,12 @@ p {
     font-size: 2.25rem;
     font-weight: 700;
   }
-}
 
-.-massive {
-  font-size: 3rem;
-  font-weight: 700;     
+  &.-massive {
+    font-size: 3rem;
+    font-weight: 700;     
+  }
 }
-
-/** 
-* <p>Settings that manage Subtitles.<br/>
-* Subtitles are usually associated with titles, either before or after.
-*   This rules can be overwrittend by components, but only if necessary.<br/>
-*   **Remember without variant, is the default subtitle**
-* </p>
-* <p>See _objects.typography.scss</p>
-* @example
-<div class="random-component">
-    <h4 class="__subtitle">
-        This is a default subtitle
-    </h4>
-    <h4 class="__subtitle -big">
-        This is a big subtitle
-    </h4>
-    <h4 class="__subtitle -small">
-        This is a small subtitle, usually set uppercase for better legibility
-    </h4>
-    <h4 class="__subtitle -light">
-        A subtitle can also have a lighter font weight via -light variant
-    </h4>
-</div>
-* @section Subtitles
-* @page Typography
-*/
 
 // SubTitles
 .__subtitle {
@@ -153,26 +50,6 @@ p {
     }
 }
 
-/**
-* <p>
-*   In case you need a Title to be followed by a subtitle or viceversa, wrap them in a div with **title-group** class.<br/>
-*   Note that the first element wrapped in a title-group element is always set to uppercase by default.
-* </p>
-* <p>See _objects.typography.scss</p>
-* @example
-<div class="title-group" style="padding:20px">
-    <h3>This title is uppercase, since first child in a title-group</h3>
-    <h4 class="__subtitle -light -big">This is a light subtitle</h4>
-</div>
-<div class="title-group" style="padding:20px">
-    <h4 class="__subtitle -small">This is a small subtitle, still uppercase</h4>
-    <h2>This is the title</h2>
-</div>
-*
-* @section Title Groups
-* @page Typography
-*/
-
 // Title groups
 .title-group {
   & >:nth-child(1) {
@@ -182,31 +59,5 @@ p {
 
   & >:nth-child(2) {
     margin-bottom: .75em;
-  }
-}
-
-
-.router-link {
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.5em;
-  color: $color__primary;
-  text-decoration: underline;
-
-  &:active {
-    color: $color__primary;
-  }
-  &.-big {
-    font-size: 1rem;
-  }
-
-  &.-small {
-    font-size: 0.75rem;
-  }
-  &.-light {
-    font-weight:400;
-  }
-  &.-noline {
-    text-decoration: none;
   }
 }
