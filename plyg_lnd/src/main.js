@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueCarousel from 'vue-carousel';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-regular-svg-icons';
@@ -8,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 import './registerServiceWorker';
 
+Vue.use(VueCarousel);
 library.add(
   faCircleNotch,
   faComment,
