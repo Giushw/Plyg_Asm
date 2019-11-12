@@ -59,6 +59,8 @@
   flex-basis: 100%;
 }
 
+@include no-highlight;
+
 // @include on-vp('small') {
 //   display: none;
 // }

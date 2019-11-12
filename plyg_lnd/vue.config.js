@@ -1,5 +1,12 @@
 module.exports = {
   css: {
-    sourceMap: true
-  }
+    sourceMap: true,
+    loaderOptions: {
+      scss: {
+        // prependData: `@import "~@/variables.scss";`
+      },
+    }
+  },
+
+  runtimeCompiler: true
 }
