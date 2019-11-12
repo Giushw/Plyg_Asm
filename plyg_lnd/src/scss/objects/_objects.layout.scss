@@ -59,16 +59,9 @@
   flex-basis: 100%;
 }
 
-@include no-highlight;
 
-// @include on-vp('small') {
-//   display: none;
-// }
-@include vp-small-xs {
-  // outline: 2px solid cyan;
-}
-
-@media screen and (min-width: 800px) {
+// @include on-vp('medium') {
+@media screen and (min-width: 768px) {
   .grid-column {
     flex: 1;
 

@@ -1,0 +1,41 @@
+/**
+* Slideshow
+*/
+
+.slideshow-wrapper {
+  & .__img {
+    width: 100%;
+  }
+}
+
+.slideshow {
+  
+}
+
+// Vue Carousel override
+.VueCarousel-navigation {
+  & .VueCarousel-navigation-button {
+    &.VueCarousel-navigation-prev, &.VueCarousel-navigation-next {
+      color: $color__gray;
+      transform: translateY(-50%);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $color__gray--light;
+      }
+    }
+  }
+  
+}
+
+.VueCarousel-pagination {
+  padding: 25px 0;
+}
+
+.VueCarousel-dot-container[style] {
+  margin: 0 !important;
+}
+
+.VueCarousel-dot[style] {
+    margin: 0 !important;
+}
