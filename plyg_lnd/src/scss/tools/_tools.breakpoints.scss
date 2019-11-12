@@ -1,0 +1,113 @@
+/**
+* BreackPoints
+*/
+
+$breakpoints: (
+    small-xs : $breakpoint__small-xs,
+    small-s : $breakpoint__small-s,
+    small : $breakpoint__small,
+    medium : $breakpoint__medium,
+    large : $breakpoint__large,
+    large-l : $breakpoint__large-l
+);
+
+/// Mixin to manage responsive breakpoints
+/// modded by  @author Hugo Giraudel
+
+@mixin on-vp($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "No value found for `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin on-vp-max($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint) - 1) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "No value found for `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Breakpoint Mixins
+@mixin vp-small-xs {
+  @media only screen and (min-width: $breakpoint__small-xs) {
+    @content;
+  }
+}
+/*
+@mixin vp-small-xs--max {
+  @media only screen and (max-width: $breakpoint__small-xs--max) {
+    @content;
+  }
+}
+
+@mixin vp-small-s {
+  @media only screen and (min-width: $breakpoint__small-s) {
+    @content;
+  }
+}
+
+@mixin vp-small-s--max {
+  @media only screen and (max-width: $breakpoint__small-s--max) {
+    @content;
+  }
+}
+
+@mixin vp-small {
+  @media only screen and (min-width: $breakpoint__small) {
+    @content;
+  }
+}
+
+@mixin vp-small--max {
+  @media only screen and (max-width: $breakpoint__small--max) {
+    @content;
+  }
+}
+
+@mixin vp-medium {
+  @media only screen and (min-width: $breakpoint__medium) {
+    @content;
+  }
+}
+
+@mixin vp-medium--max {
+  @media only screen and (max-width: $breakpoint__medium--max) {
+    @content;
+  }
+}
+
+@mixin vp-large {
+  @media only screen and (min-width: $breakpoint__large) {
+    @content;
+  }
+}
+
+@mixin vp-large--max {
+  @media only screen and (max-width: $breakpoint__large--max) {
+    @content;
+  }
+}
+
+@mixin vp-large-xl {
+  @media only screen and (min-width: $breakpoint__large-xl) {
+    @content;
+  }
+}
+*/

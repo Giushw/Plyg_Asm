@@ -8,5 +8,13 @@ $line-height--base: 1.4 !default;
 
 // Grid
 $grid-max-width: 1440px;
-$grid-horizontal-padding: 20px;
-$grid-horizontal-padding-mobile: 15px;
+$grid-marging: 150px;
+$grid-gutter: 30px;
+
+// BreakPoints
+$breakpoint__small-xs: 320px;
+$breakpoint__small-s: 480px;
+$breakpoint__small: 560px;
+$breakpoint__medium: 768px;
+$breakpoint__large: 1024px;
+$breakpoint__large-l: 1200px;
