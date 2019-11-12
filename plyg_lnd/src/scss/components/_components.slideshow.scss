@@ -8,21 +8,57 @@
   }
 }
 
-.slideshow {
-  
-}
+.slideshow-titlegroup {
+  position: absolute;
+  top: 35%;
+  left: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15%;
+  color: $color__secondary;
 
+  & > .__title {
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+
+  & > .__subtitle {
+    padding-right: 51px;
+    text-align: left;
+  }
+}
+  
 // Vue Carousel override
 .VueCarousel-navigation {
   & .VueCarousel-navigation-button {
+    width: 45px;
+    height: 45px;
+
     &.VueCarousel-navigation-prev, &.VueCarousel-navigation-next {
-      color: $color__gray;
-      transform: translateY(-50%);
-      transition: color 0.3s ease-in-out;
+      background-color: transparent;
+      transition: background-color 0.3s ease-in-out;
 
       &:hover {
-        color: $color__gray--light;
+        background-color: $color__gray--light;
       }
+
+      & img {
+        width: 100%;
+        height: 100%;;
+      }
+
+      &[style] {
+        outline: none !important;
+    }
+    }
+
+    &.VueCarousel-navigation-prev {
+      transform: translateY(-50%) translateX(40%);
+    }
+
+    &.VueCarousel-navigation-next {
+      transform: translateY(-50%) translateX(-40%);
     }
   }
   
@@ -38,4 +74,5 @@
 
 .VueCarousel-dot[style] {
     margin: 0 !important;
+    outline: none !important;
 }

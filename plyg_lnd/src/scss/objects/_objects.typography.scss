@@ -21,6 +21,7 @@
 36px = 2.25rem
 38px = 2.375rem
 40px = 2.5rem
+70px = 4.375rem
 */
 
 // Paragraphs
@@ -55,7 +56,7 @@ p {
   }
 
   &.-ginormous {
-    font-size: 3rem;
+    font-size:  4.375rem;
     font-weight: 700;     
   }
 }
