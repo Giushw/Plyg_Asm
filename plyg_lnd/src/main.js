@@ -17,6 +17,7 @@ library.add(
   faLinkedinIn,
   faInstagram,
 );
+
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
