@@ -5,8 +5,8 @@ module.exports = {
       scss: {
         // prependData: `@import "~@/variables.scss";`
       },
-    }
+    },
   },
 
-  runtimeCompiler: true
-}
+  runtimeCompiler: true,
+};

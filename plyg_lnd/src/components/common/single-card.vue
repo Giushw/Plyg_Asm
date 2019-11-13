@@ -1,7 +1,12 @@
 <template>
   <article class="card-wrapper">
-    <header class="card-heading">
-      <img :src="image" class="__img" :alt="alt">
+    <header class="card-heading"
+      :class="{
+        '-play': image === 'play',
+        '-simply': image === 'simply',
+        '-inno': image === 'inno'
+        }"
+    >
     </header>
     <div class="card-body">
       <p class="__description">

@@ -10,9 +10,10 @@ button, .__btn {
   padding: 1.335em 1em;
   border: 1px solid $color__primary;
   font-family: $font__main;
+  font-size: 0.875rem;
   text-decoration: none;
   line-height: 1;
-  font-weight: 500;
+  font-weight: normal;
   color: $color__secondary;
   background-color: $color__primary;
   transition: all .2s ease-in-out;
@@ -21,16 +22,6 @@ button, .__btn {
   &:hover {
     color: $color__primary;
     background-color: $color__secondary;
-  }
-
-  &.-small {
-    font-weight: normal;
-    padding: 1em;
-    font-size: 0.6875em;
-  }
-
-  &.-full {
-    width: 100%;
   }
 
   &:focus {
@@ -44,5 +35,15 @@ button, .__btn {
       outline: none;
       cursor: not-allowed;
     }
+  }
+
+  &.-small {
+    padding: 1em;
+    font-size: 0.625rem;
+  }
+
+  &.-full {
+    width: 100%;
+    letter-spacing: .3em;
   }
 }

@@ -24,15 +24,15 @@ export default {
     return {
       infoCards: [
         {
-          image: '../../assets/images/card-play-harder.png',
+          image: 'play',
           description: 'Aenean mollis dolor a mattis viverra. In hac habitasse platea dictumst. Curabitur tempus dui tortor, et bibendum lacus eleifend ut.',
         },
         {
-          image: '../../assets/images/card-card-simplicity.png',
+          image: 'simply',
           description: 'Donec vitae augue tellus. Proin et urna sit amet metus fermentum dapibus non quis urna.',
         },
         {
-          image: '../../assets/images/card-innovation.png',
+          image: 'inno',
           description: 'Suspendisse vehicula, lectus sed molestie aliquam, arcu neque gravida lacus.',
         },
       ],
