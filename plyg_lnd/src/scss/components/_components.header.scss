@@ -13,7 +13,7 @@
   transition: background-color 0.8s ease-in-out;
 
   &.is-carousel-covered {
-    background-color: rgba($color__primary, .5);
+    background-color: rgba($color__primary, .8);
   }
   
   &.is-carousel-visible {

@@ -1,41 +1,36 @@
 <template>
-  <div class="cards-wrapper">
+  <div class="info-wrapper">
     <div class="grid-wrapper ">
-      <div class="grid-row -gutted -padded">
-        <SingleCard v-for="card in infoCards" :key="card.id"
-        class="grid-column"
-        :image="card.image"
-        :description="card.description"
-      />
+      <div class="grid-row -padded">
+        <div class="grid-column">
+          <div class="info-tabs">
+            <div class="tab-wrapper">
+              <div class="tab-text">
+                TXT
+              </div>
+              <font-awesome-icon :icon="['fas', 'angle-right']"></font-awesome-icon>
+            </div>
+            <div class="tab-wrapper"></div>
+            <div class="tab-wrapper"></div>
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="info-text">
+            <p>
+              
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SingleCard from '../common/single-card.vue';
-
 export default {
-  name: 'cards',
-  components: {
-    SingleCard,
-  },
+  name: 'info',
   data() {
     return {
-      infoCards: [
-        {
-          image: 'play',
-          description: 'Aenean mollis dolor a mattis viverra. In hac habitasse platea dictumst. Curabitur tempus dui tortor, et bibendum lacus eleifend ut.',
-        },
-        {
-          image: 'simply',
-          description: 'Donec vitae augue tellus. Proin et urna sit amet metus fermentum dapibus non quis urna.',
-        },
-        {
-          image: 'inno',
-          description: 'Suspendisse vehicula, lectus sed molestie aliquam, arcu neque gravida lacus.',
-        },
-      ],
     };
   },
 };
