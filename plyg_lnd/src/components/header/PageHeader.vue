@@ -1,5 +1,10 @@
 <template>
-  <header class="page-header">
+  <header class="page-header"
+    :class="{
+      'is-carousel-visible': scrollPosition < slideshowHeight,
+      'is-carousel-covered': scrollPosition > slideshowHeight
+    }"
+  >
     <div class="header-wrapper grid-wrapper">
       <div class="grid-row -padded -gutted">
         <div class="grid-column">
@@ -11,16 +16,16 @@
         <div class="grid-column">
           <nav class="header-nav">
             <ul class="navigation-list">
-              <li class="__item" @click="moveToWeAre">
+              <li class="__item" @click="callToWeAre">
                 we are
               </li>
-              <li class="__item">
+              <li class="__item" @click="callToWeDo">
                 we do
               </li>
-              <li class="__item">
+              <li class="__item" @click="callToCareers">
                 careers
               </li>
-              <li class="__item">
+              <li class="__item" @click="callToContacts">
                 contact us
               </li>
             </ul>
@@ -34,9 +39,30 @@
 <script>
 export default {
   name: 'PageHeader',
+  data() {
+    return {
+      scrollPosition: null,
+      slideshowHeight: 798,
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
   methods: {
-    moveToWeAre() {
-      // element.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+    callToWeAre() {
+      this.$emit('anchorWeAre');
+    },
+    callToWeDo() {
+      this.$emit('anchorWeDo');
+    },
+    callToCareers() {
+      this.$emit('anchorCareers');
+    },
+    callToContacts() {
+      this.$emit('anchorContacs');
     },
   },
 };

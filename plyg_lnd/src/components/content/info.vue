@@ -3,10 +3,10 @@
     <div class="grid-wrapper ">
       <div class="grid-row -gutted -padded">
         <SingleCard v-for="card in infoCards" :key="card.id"
-          class="grid-column"
-          :image="card.image"
-          :description="card.description"
-        />
+        class="grid-column"
+        :image="card.image"
+        :description="card.description"
+      />
       </div>
     </div>
   </div>

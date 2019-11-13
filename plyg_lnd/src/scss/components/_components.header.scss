@@ -10,6 +10,15 @@
   z-index: 1000;
   display: flex;
   justify-content: center;
+  transition: background-color 0.8s ease-in-out;
+
+  &.is-carousel-covered {
+    background-color: rgba($color__primary, .5);
+  }
+  
+  &.is-carousel-visible {
+    background-color: transparent;
+  }
 }
 
 .header-wrapper {

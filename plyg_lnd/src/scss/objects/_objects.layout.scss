@@ -2,7 +2,6 @@
 * Layout
 */
 
-
 // Page Layout
 .page-container {
   background-color: $color__primary;
@@ -38,8 +37,12 @@
   flex-wrap: wrap;
   width: 100%;
 
+  &.-inverted {
+    flex-direction: row-reverse;
+  }
+
   &.-padded {
-    margin: 0 $grid-marging;
+    padding: 0 $grid-marging;
   }
 
   &.-gutted {
@@ -55,39 +58,30 @@
 
 .grid-column {
   display: flex;
-  align-items: center;
   flex-direction: column;
   flex-basis: 100%;
 }
 
+$widthPerc: (
+    twenty : 2,
+    thirty : 3,
+    fourty : 4,
+    fifty : 5,
+    sixty : 6,
+    seventy : 7,
+    eighty : 8,
+    ninety : 9
+);
 
 // @include on-vp('medium') {
 @media screen and (min-width: 768px) {
   .grid-column {
     flex: 1;
 
-    &.-twenty {
-      flex: 2;
-    }
-
-    &.-twentyFive {
-      flex: 2.5;
-    }
-
-    &.-thirty {
-      flex: 3;
-    }
-
-    &.-fiftyFive {
-      flex: 5.5;
-    }
-
-    &.-seventy {
-      flex: 7;
-    }
-
-    &.-ninety {
-      flex: 9;
+    @each $name, $perc in  $widthPerc {
+      &.-#{$name} {
+          flex: $perc;
+      }
     }
   }
 }

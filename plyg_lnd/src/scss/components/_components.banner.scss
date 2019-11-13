@@ -1,0 +1,84 @@
+/**
+* Banner
+*/
+
+.banners-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-wrapper {
+  width: 100%;
+  background-color: $color__primary;
+
+  & .-inverted {
+    & .grid-column {
+      &:last-of-type {
+        background-color: $color__secondary;
+
+        & .banner-info {
+          color: $color__primary;
+          padding-left: 0;
+          padding-right: 100px;
+        }
+      }
+    }
+  }
+
+  & .grid-column {
+    min-height: 600px;
+    justify-content: center;    
+  }
+}
+
+.banner-image {
+  width: 100%;
+  min-height: 600px;
+
+  .-weare & {
+    background: url('../assets/images/banner-we-are.jpg') no-repeat;
+  }
+
+  .-wedo &{
+    background: url('../assets/images/banner-we-do.jpg') right no-repeat;
+  }
+
+  .-careers & {
+    background: url('../assets/images/banner-carrers.jpg') no-repeat;
+  }
+}
+
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  align-content: right;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding-left: 100px;
+  color: $color__secondary;
+
+  & > .__title {
+    width: 49%;
+    margin-bottom: 40px;
+  }
+
+  & > .__subtitle {
+    width: 49%;
+    margin-bottom: 40px;
+  }
+
+  .-careers & {
+    & > .__title {
+      width: 60%;
+    }
+  }
+
+  .-inverted & {
+    align-items: flex-end;
+
+    & > .__title, & > .__subtitle {
+      text-align: right;
+    }
+  }
+}

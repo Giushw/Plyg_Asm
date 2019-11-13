@@ -1,8 +1,18 @@
 <template>
   <div class="page-wrap">
-    <PageHeader/>
+    <PageHeader
+      @anchorWeAre="moveToWeAre"
+      @anchorWeDo="moveToWeDo"
+      @anchorCareers="moveToCareers"
+      @anchorWeContacts="moveToContacts"
+    />
     <PageContent/>
-    <PageFooter/>
+    <PageFooter
+      @anchorWeAre="moveToWeAre"
+      @anchorWeDo="moveToWeDo"
+      @anchorCareers="moveToCareers"
+      @anchorWeContacts="moveToContacts"
+    />
     <Cookies/>
   </div>
 </template>
@@ -20,6 +30,20 @@ export default {
     PageContent,
     PageFooter,
     Cookies,
+  },
+  methods: {
+    moveToWeAre() {
+      document.getElementById('weare').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    },
+    moveToWeDo() {
+      document.getElementById('wedo').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    },
+    moveToCareers() {
+      document.getElementById('careers').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    },
+    moveToContacts() {
+      document.getElementById('contacs').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    },
   },
 };
 </script>

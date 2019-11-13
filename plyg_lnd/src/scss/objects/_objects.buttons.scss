@@ -1,58 +1,32 @@
-// ***********************************************
-// BUTTONS
-// common buttons shared by all applications pages
-// ***********************************************
-
-.-cta {
-  color: $color__primary;
-  background-color: $color__secondary;
-  border-color: $color__text--lighter;
-  outline-color: $color__text--lighter;
-
-  &:hover {
-    outline: 1px solid $color__text--lighter;
-    background-color: inherit;
-  }
-
-  &.-cartFindIcon {
-    background: url('/assets/images/icons/cta_cart_find.png') center 2em no-repeat;
-    padding-top: 90px;
-  }
-
-  &.-cartPhoneIcon {
-    background: url('/assets/images/icons/cta_cart_phone.png') center 2em no-repeat;
-    padding-top: 90px;
-  }
-}
+/**
+* Button
+*/
 
 .-outline {
-  color: $color__primary;
-  background-color: $color__secondary;
-  border-color: inherit;
+  border: 1px solid $color__secondary;
 
   &:hover {
-    background-color: inherit;
-    outline: 1px solid;
-    
-    @include IEfix {
-      background-color: $color__secondary;
-    }
+    border-color: $color__primary;
   }
 
   &.-inverted {
-    color: $color__secondary;
-    background-color: $color__primary;
+    color: $color__primary;
+    background-color: $color__secondary;
+    border-color: $color__primary;
+
+    &:hover {
+      color: $color__secondary;
+      background-color: $color__primary;
+      border-color: $color__secondary;
+    }
   }
 }
 
-.-collapsed {
-  display: inline-block;
-  width: fit-content;
-  min-width: 160px;
-  max-width: 300px;
+.-cta {
+  padding: 20px;
 
-  @include IEfix {
-    width: auto;
+  svg {
+    margin-left: 10px
   }
 }
 

@@ -8,16 +8,16 @@
     </picture>
     <nav class="footer-nav">
       <ul class="navigation-list">
-        <li class="__item __subtitle -light" @click="moveToWeAre">
+        <li class="__item __subtitle -light" @click="callToWeAre">
           we are
         </li>
-        <li class="__item __subtitle -light">
+        <li class="__item __subtitle -light" @click="callToWeDo">
           we do
         </li>
-        <li class="__item __subtitle -light">
+        <li class="__item __subtitle -light" @click="callToCareers">
           careers
         </li>
-        <li class="__item __subtitle -light">
+        <li class="__item __subtitle -light" @click="callToContacts">
           contact us
         </li>
       </ul>
@@ -41,8 +41,17 @@
 export default {
   name: 'PageFooter',
   methods: {
-    moveToWeAre() {
-      console.log('clicked');
+    callToWeAre() {
+      this.$emit('anchorWeAre');
+    },
+    callToWeDo() {
+      this.$emit('anchorWeDo');
+    },
+    callToCareers() {
+      this.$emit('anchorCareers');
+    },
+    callToContacts() {
+      this.$emit('anchorContacs');
     },
   },
 };

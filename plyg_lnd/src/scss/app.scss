@@ -25,8 +25,7 @@
 
 // 05 Objects
 @import 'objects/objects.layout';
-// @import 'objects/objects.buttons';
-// @import 'objects/objects.pictures';
+@import 'objects/objects.buttons';
 // @import 'objects/objects.inputs';
 @import 'objects/objects.typography';
 @import 'objects/objects.lists';
@@ -35,8 +34,9 @@
 @import 'components/components.header';
 @import 'components/components.slideshow';
 @import 'components/components.cards';
-@import 'components/components.footer';
+@import 'components/components.banner';
 @import 'components/components.cookie';
+@import 'components/components.footer';
 
 // 07 Utilities
 @import 'utilities/utilities.global.variants';
