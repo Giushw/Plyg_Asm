@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="grid-column -fiftyFive">
+        <div class="grid-column -sixtyFive">
           <transition name="fade-in" mode="out-in">
             <div class="info-text" :key="loading">
               <spinner v-if="loading" />
@@ -53,7 +53,7 @@ import apiCall from '../../libs/axiosConf';
 import spinner from '../common/spinner.vue';
 
 export default {
-  name: 'info',
+  name: 'infos',
   components: {
     spinner,
   },

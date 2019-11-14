@@ -48,4 +48,14 @@ button, .__btn {
   &.-full {
     width: 100%;
   }
+
+  &.-inverted {
+    color: $color__primary;
+    background-color: $color__secondary;
+
+    &:hover {
+      color: $color__secondary;
+      background-color: $color__gray;
+    }
+  }
 }
