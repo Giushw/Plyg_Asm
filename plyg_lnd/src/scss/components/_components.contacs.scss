@@ -5,3 +5,29 @@
 .contacts-wrapper {
   padding: 100px 0;
 }
+
+.contacs-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $color__secondary;
+  padding-left: 100px;
+
+  & > .__title {
+    margin-bottom: 35px;
+  }
+
+  & > .__subtitle {
+    white-space: pre-line;
+  }
+}
+
+.contacts-form {
+  display: flex;
+  padding: 0 100px 0 30px;
+
+  & > .__btn {
+    min-width: 160px;
+    min-height: 40px;
+  }
+}

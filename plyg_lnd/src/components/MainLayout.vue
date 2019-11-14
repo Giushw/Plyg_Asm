@@ -4,14 +4,14 @@
       @anchorWeAre="moveToWeAre"
       @anchorWeDo="moveToWeDo"
       @anchorCareers="moveToCareers"
-      @anchorWeContacts="moveToContacts"
+      @anchorContacts="moveToContacts"
     />
     <PageContent/>
     <PageFooter
       @anchorWeAre="moveToWeAre"
       @anchorWeDo="moveToWeDo"
       @anchorCareers="moveToCareers"
-      @anchorWeContacts="moveToContacts"
+      @anchorContacts="moveToContacts"
     />
     <Cookies/>
   </div>
@@ -42,7 +42,7 @@ export default {
       document.getElementById('careers').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     },
     moveToContacts() {
-      document.getElementById('contacs').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+      document.getElementById('contacts').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     },
   },
 };

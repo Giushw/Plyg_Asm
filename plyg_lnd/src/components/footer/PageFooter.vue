@@ -51,7 +51,7 @@ export default {
       this.$emit('anchorCareers');
     },
     callToContacts() {
-      this.$emit('anchorContacs');
+      this.$emit('anchorContacts');
     },
   },
 };

@@ -2,16 +2,25 @@
 * Inputs
 */
 
+textarea {
+  resize: none;
+}
+
 input, textarea {
   font-family: $font__main;
   font-size: 0.875rem;
   line-height: 1;
   padding: 15px;
   background-color: $color__primary;
+  color: $color__secondary;
   border: 1px solid $color__secondary;
 
   &:focus {
     outline: none;
     outline-offset: 0;
+  }
+
+  &::placeholder {
+    color: $color__text;
   }
 }

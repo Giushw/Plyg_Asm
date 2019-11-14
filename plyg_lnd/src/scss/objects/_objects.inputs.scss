@@ -3,63 +3,45 @@
 */
 
 // Wrapper
-.input-wrapper, .select-wrapper, .checkbox-wrapper, .radio-wrapper {
-  & > .__label {
-    color: #a3a3a3;
-    font-size: 0.625em;
-    margin-bottom: 3px;
-    text-transform: uppercase;
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &.has-error {
+    & > .__input {
+      margin-bottom: 0;
+    }
+  }
+
+  & > .__input {
+    margin-bottom: 20px;
   }
 
   & > .error-msg {
     color: $color__error;
     font-size: 0.625em;
-    text-transform: uppercase;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    text-transform: capitalize;
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
 }
 
 // Inputs
-input {
+input, textarea {
 
   &::-ms-clear, &::-ms-reveal {    // IE11 fix on user agent default clear + eye buttons
     display: none;
-  }
-
-  &:focus {
-    border-color: $color__primary;
-    outline: none;
   }
 
   &:disabled {
     opacity: 0.5;
   }
 
-  // &.-success {
-  //   border-color: $color__success;
-  //   background: url('/assets/images/icons/checked--success.svg') no-repeat right 15px center/25px; // sostituisci con icona success 
-  // }
+  &.-success {
+    border-color: $color__success;
+  }
 
-  // &.-error {
-  //   border-color: $color__error;
-  //   background: url('/assets/images/icons/cancel.svg') no-repeat right 15px center/25px; // sostituisci con icona errore
-  // }
-}
-
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  // @include on-mobile {
-  //   flex-direction: column;
-  // }
-
-  // & > input {
-  //   margin-bottom: 29px;
-
-  //   &.-error {
-  //     margin-bottom: 0;
-  //   }
-  // }
+  &.-error {
+    border-color: $color__error;
+  }
 }

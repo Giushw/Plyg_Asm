@@ -10,7 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 import './registerServiceWorker';
 
-Vue.use(VueCarousel, Vuelidate);
+Vue.use(VueCarousel);
+Vue.use(Vuelidate);
+
 library.add(
   faCircleNotch,
   faComment,
