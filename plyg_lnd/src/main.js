@@ -26,6 +26,3 @@ Vue.config.productionTip = false;
 new Vue({
   render: h => h(App),
 }).$mount('#app');
-
-// <i class="fas fa-circle-notch"></i>
-// <i class="fas fa-angle-right"></i>

@@ -3,6 +3,8 @@
 */
 
 .slideshow-wrapper {
+  position: relative;
+
   & .__img {
     width: 100%;
   }
@@ -10,7 +12,7 @@
 
 .slideshow-titlegroup {
   position: absolute;
-  top: 20%;
+  top: 35%;
   left: 22%;
   display: flex;
   flex-direction: column;

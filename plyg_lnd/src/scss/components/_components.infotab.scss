@@ -1,0 +1,68 @@
+/**
+* Infotab
+*/
+
+.infoTab-wrapper {
+  background-color: $color__background;
+  padding: 80px 0;
+
+  & .grid-row {
+    align-items: flex-start;
+
+    & .grid-column {
+      &:last-of-type {
+        background-color: $color__secondary;
+      }
+    }
+  }
+}
+
+.info-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tab-wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  padding: 25px 75px;
+  background-color: $color__background--dark;
+  color: $color__primary;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color__primary;
+    color: $color__secondary;
+  }
+
+  &.is-active {
+    background-color: $color__primary;
+    color: $color__secondary;
+    
+    & svg {
+      transform: rotate(270deg);
+    }
+  }
+
+  & > .__subtitle {
+    margin-right: 10px;
+  }
+
+  & svg {
+    align-self: center;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.info-text {
+  display: flex;
+  align-items: flex-start;
+  min-height: 350px;
+  
+  padding: 50px 90px;
+}
+

@@ -3,6 +3,7 @@
     <slideshow/>
     <cards/>
     <banners/>
+    <info />
   </section>
 </template>
 
@@ -10,6 +11,7 @@
 import slideshow from './slideshow.vue';
 import cards from './cards.vue';
 import banners from './banners.vue';
+import info from './info.vue';
 
 export default {
   name: 'PageContent',
@@ -17,6 +19,7 @@ export default {
     slideshow,
     cards,
     banners,
+    info,
   },
 };
 </script>
