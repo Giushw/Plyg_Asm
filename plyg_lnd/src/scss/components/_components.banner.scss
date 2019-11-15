@@ -26,14 +26,22 @@
   }
 
   & .grid-column {
-    min-height: 600px;
+    min-height: 300px;
     justify-content: center;    
+
+    @include on-vp('medium') {
+      min-height: 600px;
+    }
   }
 }
 
 .banner-image {
   width: 100%;
-  min-height: 600px;
+  min-height: 300px;
+  
+  @include on-vp('medium') {
+    min-height: 600px;
+  }
 
   .-weare & {
     background: url('../assets/images/banner-we-are.jpg') no-repeat;

@@ -19,6 +19,12 @@ export default {
   components: {
     TwoThirdBanner,
   },
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
+  },
   data() {
     return {
       infoBanners: [
