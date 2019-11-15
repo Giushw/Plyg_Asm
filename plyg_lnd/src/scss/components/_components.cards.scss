@@ -12,10 +12,14 @@
 }
 
 .card-wrapper {
-  max-width: 360px;
+  width: 100%;
   min-height: 350px;
   justify-content: space-between;
   background-color: $color__secondary;
+
+  @include on-vp('medium') {
+    max-width: 360px;
+  }
 
   @include on-vp-max('medium') {
     margin-bottom: 30px;
@@ -32,6 +36,7 @@
   
   &.-play {
     background: url('../assets/images/card-play-harder.png') center no-repeat;
+    // background-size: cover;
   }
 
   &.-simply {
@@ -49,7 +54,11 @@
 
 .card-body {
   width: 100%;
-  padding: 40px 50px;
+  padding: 40px;
+
+  @include on-vp('medium') {
+    padding: 40px 50px;
+  }
 
   & > .__description {
     color: $color__text--black;

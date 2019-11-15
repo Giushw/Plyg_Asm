@@ -18,7 +18,9 @@
         </div>
         <div class="grid-column -sixtyFive">
           <form class="contacts-form">
-            <div class="grid-row -gutted">
+            <div class="grid-row"
+              :class="[isMobile ? '': '-gutted']"
+            >
               <div class="grid-column">
                 <div class="input-wrapper"
                   :class="{ 'has-error': $v.name.$error }"
@@ -151,7 +153,9 @@
                 </div>
               </div>
             </div>
-            <button class="__btn -inverted">
+            <button class="__btn -inverted"
+              :class="[isMobile ? '-full': '']"
+            >
               Send
               <font-awesome-icon :icon="['fas', 'angle-right']"></font-awesome-icon>
             </button>
@@ -182,6 +186,12 @@ export default {
       email: '',
       message: '',
     };
+  },
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
   },
   validations() {
     return {

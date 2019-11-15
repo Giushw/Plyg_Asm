@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       scrollPosition: null,
-      slideshowHeight: 798,
+      slideshowHeight: this.isMobile ? 62 : 798,
     };
   },
   props: {

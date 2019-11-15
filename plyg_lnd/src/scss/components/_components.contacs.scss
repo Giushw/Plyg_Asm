@@ -3,10 +3,11 @@
 */
 
 .contacts-wrapper {
-  padding: 100px 0;
+  padding: 20px 0;
 
-  @include on-vp-max('medium') {
-    display: none;
+  @include on-vp('medium') {
+  padding: 100px 0;
+    
   }
 }
 
@@ -15,20 +16,34 @@
   flex-direction: column;
   justify-content: space-between;
   color: $color__secondary;
-  padding-left: 100px;
+  
+  @include on-vp('medium') {
+    padding-left: 100px;
+  }
 
   & > .__title {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+
+    @include on-vp('medium') {
+      margin-bottom: 35px;
+    }
   }
 
   & > .__subtitle {
     white-space: pre-line;
+
+    @include on-vp-max('medium') {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .contacts-form {
   display: flex;
-  padding: 0 100px 0 30px;
+  
+  @include on-vp('medium') {
+    padding: 0 100px 0 30px;
+  }
 
   & > .__btn {
     min-width: 160px;
