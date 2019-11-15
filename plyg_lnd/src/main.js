@@ -35,9 +35,6 @@ library.add(
   faInstagram,
 );
 
-
-// <i class="far fa-envelope"></i>
-
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
