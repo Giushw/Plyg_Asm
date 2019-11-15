@@ -1,7 +1,9 @@
 <template>
   <div class="cards-wrapper">
     <div class="grid-wrapper ">
-      <div class="grid-row -gutted -padded -stretched">
+      <div class="grid-row -padded -stretched"
+        :class="[isMobile ? '': '-gutted']"
+      >
         <SingleCard v-for="card in infoCards" :key="card.id"
           class="grid-column"
           :image="card.image"
@@ -19,6 +21,12 @@ export default {
   name: 'cards',
   components: {
     SingleCard,
+  },
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
   },
   data() {
     return {
