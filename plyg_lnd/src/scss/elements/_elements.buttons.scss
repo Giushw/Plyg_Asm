@@ -22,8 +22,10 @@ button, .__btn {
   cursor: pointer;
 
   &:hover {
-    color: $color__primary;
-    background-color: $color__secondary;
+    &:not(.fab-btn) {
+      color: $color__primary;
+      background-color: $color__secondary;
+    }
   }
 
   &:focus {

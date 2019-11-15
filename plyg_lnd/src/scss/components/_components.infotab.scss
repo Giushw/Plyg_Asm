@@ -4,7 +4,11 @@
 
 .infoTab-wrapper {
   background-color: $color__background;
-  padding: 80px 0;
+  padding: 30px 0;
+
+  @include on-vp('medium') {
+    padding: 80px 0;
+  }
 
   & .grid-row {
     align-items: flex-start;
@@ -26,12 +30,17 @@
 .tab-wrapper {
   display: flex;
   align-content: center;
-  justify-content: flex-start;
-  padding: 25px 75px;
+  justify-content: center;
+  padding: 15px;
   background-color: $color__background--dark;
   color: $color__primary;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
+
+  @include on-vp('medium') {
+    justify-content: flex-start;
+    padding: 25px 75px;
+  }
 
   &:hover {
     background-color: $color__primary;
@@ -61,8 +70,12 @@
 .info-text {
   display: flex;
   align-items: flex-start;
-  min-height: 350px;
-  
-  padding: 50px 90px;
+  min-height: 200px;
+  padding: 15px 25px;
+
+  @include on-vp('medium') {
+    min-height: 350px;
+    padding: 50px 90px;
+  }
 }
 

@@ -7,6 +7,7 @@
       :subtitle="banner.subtitle"
       :cta="banner.cta"
       :direction="banner.direction"
+      :isMobile="isMobile"
     />
   </div>
 </template>

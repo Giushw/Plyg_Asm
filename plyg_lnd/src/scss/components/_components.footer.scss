@@ -5,21 +5,29 @@
 .page-footer {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   flex: 0 0 auto;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 50px;
+  padding: 15px;
   background-color: $color__primary;
   color: $color__secondary;
   border-top: 2px solid $color__gray--dark;
+
+  @include on-vp('medium') {
+    flex-direction: column;
+    padding: 50px;
+  }
 }
 
 .footer-logo {
-  margin-bottom: 60px;
   width: 150px;
   height: 36px;
+
+  @include on-vp('medium') {
+    margin-bottom: 60px;
+  }
 
   & > .__img {
     width: 100%;
@@ -44,12 +52,21 @@
 }
 
 .social-link {
-  font-size: 20px;
+  font-size: 30px;
+
+  @include on-vp('medium') {
+    font-size: 20px;
+  }
 
   & > .__icon {
-    color: $color__text--dark;
+    color: $color__secondary;
     margin-right: 15px;
     transition: color 0.5s ease-in-out;
+
+    @include on-vp('medium') {
+      color: $color__text--dark;
+      margin-right: 15px;
+    }
 
     &:hover {
       color: $color__secondary;

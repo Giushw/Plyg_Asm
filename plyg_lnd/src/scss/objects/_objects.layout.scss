@@ -24,7 +24,7 @@
 
 // Grid
 .grid-wrapper {
-  max-width: $grid-max-width;
+  max-width: $grid__max-width;
   margin: 0 auto;
 }
 
@@ -40,19 +40,19 @@
   }
 
   &.-padded {
-    padding: 0 $grid-marging-mobile;
+    padding: 0 $grid__marging-mobile;
 
     @include on-vp('medium') {
-      padding: 0 $grid-marging;
+      padding: 0 $grid__marging;
     }
   }
 
   &.-gutted {
     & > .grid-column {
-      margin-right: $grid-gutter-mobile;
+      margin-right: $grid__gutter-mobile;
 
       @include on-vp('medium') {
-        margin-right: $grid-gutter;
+        margin-right: $grid__gutter;
       }
 
       &:last-child {

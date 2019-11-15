@@ -4,6 +4,10 @@
 
 .contacts-wrapper {
   padding: 100px 0;
+
+  @include on-vp-max('medium') {
+    display: none;
+  }
 }
 
 .contacs-info {

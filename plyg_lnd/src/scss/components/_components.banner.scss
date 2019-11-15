@@ -14,19 +14,21 @@
   & .-inverted {
     & .grid-column {
       &:last-of-type {
-        background-color: $color__secondary;
+        @include on-vp('medium') {
+          background-color: $color__secondary;
+        }
 
         & .banner-info {
-          color: $color__primary;
-          padding-left: 0;
-          padding-right: 100px;
+          @include on-vp('medium') {
+            padding: 0 100px 0 0;
+            color: $color__primary;
+          }
         }
       }
     }
   }
 
   & .grid-column {
-    min-height: 300px;
     justify-content: center;    
 
     @include on-vp('medium') {
@@ -37,22 +39,39 @@
 
 .banner-image {
   width: 100%;
-  min-height: 300px;
-  
+  min-height: 400px;
+  background-size: cover;
+
   @include on-vp('medium') {
     min-height: 600px;
+    background-size: initial;
   }
 
   .-weare & {
     background: url('../assets/images/banner-we-are.jpg') no-repeat;
+    background-size: cover;
+
+    @include on-vp('medium') {
+      background-size: initial;
+    }
   }
 
   .-wedo &{
     background: url('../assets/images/banner-we-do.jpg') right no-repeat;
+    background-size: cover;
+
+    @include on-vp('medium') {
+      background-size: initial;
+    }
   }
 
   .-careers & {
     background: url('../assets/images/banner-carrers.jpg') no-repeat;
+    background-size: cover;
+    
+    @include on-vp('medium') {
+      background-size: initial;
+    }
   }
 }
 
@@ -63,23 +82,33 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding-left: 100px;
   color: $color__secondary;
+  padding: 40px 20px;
 
-  & > .__title {
-    width: 49%;
-    margin-bottom: 40px;
+  @include on-vp('medium') {
+    padding: 0 0 0 100px;
+  }
+
+  & > .__title, & > .__subtitle {
+    margin-bottom: 20px;
+
+    @include on-vp('medium') {
+      width: 49%;
+      margin-bottom: 40px;
+    }
   }
 
   & > .__subtitle {
     white-space: pre-line;
-    width: 49%;
-    margin-bottom: 40px;
   }
 
   .-careers & {
     & > .__title {
-      width: 60%;
+      width: 100%;
+
+      @include on-vp('medium') {
+        width: 60%;
+      }
     }
   }
 

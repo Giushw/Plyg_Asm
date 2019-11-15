@@ -6,20 +6,22 @@
       '-careers': image === 'careers',
     }"
   >
-    <div class="grid-row" :class="{'-inverted': direction === 'ltr'}">
+    <div class="grid-row" :class="{'-inverted': direction === 'ltr' && !isMobile}">
       <div class="grid-column -sixty">
         <div class="banner-image">
         </div>
       </div>
       <div class="grid-column -fourty">
         <div class="banner-info">
-          <div class="__title -ginormous">
+          <h2 class="__title -ginormous">
             {{ title }}
-          </div>
-          <div class="__subtitle">
+          </h2>
+          <h4 class="__subtitle">
             {{ subtitle }}
-          </div>
-          <button class="__btn -cta -outline" :class="{'-inverted': direction === 'ltr'}">
+          </h4>
+          <button class="__btn -cta -outline"
+            :class="{'-inverted': direction === 'ltr' && !isMobile, '-full': isMobile}"
+          >
             {{ cta }}
             <font-awesome-icon :icon="['fas', 'angle-right']"></font-awesome-icon>
           </button>
@@ -52,6 +54,10 @@ export default {
     direction: {
       type: String,
       defautl: 'rtl',
+    },
+    isMobile: {
+      type: Boolean,
+      required: true,
     },
   },
 };

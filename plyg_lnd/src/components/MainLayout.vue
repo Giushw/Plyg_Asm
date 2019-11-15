@@ -10,6 +10,13 @@
     <PageContent
       :isMobile="isMobile"
     />
+    <Fab
+      v-if="isMobile"
+      @anchorWeAre="moveToWeAre"
+      @anchorWeDo="moveToWeDo"
+      @anchorCareers="moveToCareers"
+      @anchorContacts="moveToContacts"
+    />
     <PageFooter
       :isMobile="isMobile"
       @anchorWeAre="moveToWeAre"
@@ -28,6 +35,7 @@ import PageHeader from './header/PageHeader.vue';
 import PageContent from './content/PageContent.vue';
 import PageFooter from './footer/PageFooter.vue';
 import Cookies from './common/cookie-policy.vue';
+import Fab from './common/fab.vue';
 
 export default {
   name: 'MainLayout',
@@ -36,6 +44,7 @@ export default {
     PageContent,
     PageFooter,
     Cookies,
+    Fab,
   },
   computed: {
     isMobile() {

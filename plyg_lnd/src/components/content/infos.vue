@@ -35,7 +35,7 @@
         </div>
         <div class="grid-column -sixtyFive">
           <transition name="fade-in" mode="out-in">
-            <div class="info-text" :key="loading">
+            <div id="infoText" class="info-text" :key="loading">
               <spinner v-if="loading" />
               <p class="__subtitle -light" v-else>
                 {{ parsedRespose.content }}
@@ -63,6 +63,12 @@ export default {
       loading: null,
       info: null,
     };
+  },
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
   },
   created() {
     this.loading = true;
@@ -123,6 +129,10 @@ export default {
           // eslint-disable-next-line
           console.log(e.message);
         });
+
+      if (this.isMobile) {
+        document.getElementById('infoText').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+      }
     },
   },
 };

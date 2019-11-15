@@ -1,0 +1,95 @@
+/**
+* Floating action Button (Fab)
+*/
+
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 500;
+  font-size: $fab__icon-dim;
+}
+
+.radial-wrapper {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  font-size: $fab__icon-dim;
+  background: $fab__color;
+  border-radius: 50%;
+  transition: all 0.5s;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 0px 4px 8px rgba(0,0,0,0.2);
+
+  &.is-open {
+    height: 400px;
+    width: 400px;
+    right: -125px;
+    bottom: -125px;
+
+    .fab-btn {
+      background-color: darken($fab__color, 15);
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
+    #plus {
+      transform: rotateZ(135deg) translate(-1px, 3px);
+    }
+    #fabFirstBtn {
+      transition-delay: 0s;
+      // transform: translate(-110px, 10px);
+      transform: translate(-120px, 40px);
+    }
+    #fabSecondBtn {
+      transition-delay: 0.1s;
+      // transform: translate(-85px, -85px);
+      transform: translate(-100px, -50px);
+    }
+    #fabThirdBtn {
+      transition-delay: 0.2s;
+      // transform: translate(10px, -110px);
+      transform: translate(-60px, -110px);
+    }
+    #fabFourthBtn {
+      transition-delay: 0.3s;
+      transform: translate(40px, -130px);
+    }
+  }
+}
+
+.fab-btn {
+  border: none;
+  color: white;
+  background-color: $fab__color;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: darken($fab__color, 15);
+  }
+}
+
+#plus {
+  transition: all 0.5s;
+  margin-top: 7px;
+}
+
+#fabFirstBtn, #fabSecondBtn, #fabThirdBtn, #fabFourthBtn {
+  position: fixed;
+  background: transparent;
+  border: none;
+  right: 60px;
+  bottom: 57px;
+  transition: all 0.5s;
+  color: white;
+
+  &:hover {
+    // tansition-delay: 0s;
+    color: lighten($fab__color, 15);
+  }
+}

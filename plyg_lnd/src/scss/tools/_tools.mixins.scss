@@ -25,11 +25,3 @@
     @content;
   }
 }
-
-// Insert Text ellipsis with default o specify the width value
-@mixin text-ellipsis($value: 100px) {
-  width: $value;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
