@@ -27,7 +27,7 @@
 }
 
 // Inputs
-input, textarea {
+.__input {
 
   &::-ms-clear, &::-ms-reveal {    // IE11 fix on user agent default clear + eye buttons
     display: none;

@@ -6,14 +6,14 @@
     }"
   >
     <div class="header-wrapper grid-wrapper">
-      <div class="grid-row -padded -gutted">
-        <div class="grid-column">
+      <div class="grid-row -padded" :class="{'-gutted': !isMobile}">
+        <div class="grid-column" :class="{'-center': isMobile}">
           <picture class="header-logo">
             <img src="../../assets/images/logo-playground-white.png"
               alt="Playground Logo" class="__img">
           </picture>
         </div>
-        <div class="grid-column">
+        <div class="grid-column" v-if="!isMobile">
           <nav class="header-nav">
             <ul class="navigation-list">
               <li class="__item" @click="callToWeAre">
@@ -44,6 +44,12 @@ export default {
       scrollPosition: null,
       slideshowHeight: 798,
     };
+  },
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);

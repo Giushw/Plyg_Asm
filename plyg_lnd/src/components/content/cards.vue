@@ -1,7 +1,7 @@
 <template>
   <div class="cards-wrapper">
     <div class="grid-wrapper ">
-      <div class="grid-row -gutted -padded">
+      <div class="grid-row -gutted -padded -stretched">
         <SingleCard v-for="card in infoCards" :key="card.id"
           class="grid-column"
           :image="card.image"

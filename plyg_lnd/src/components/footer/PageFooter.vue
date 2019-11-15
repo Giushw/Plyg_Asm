@@ -6,7 +6,7 @@
         class="__img"
       >
     </picture>
-    <nav class="footer-nav">
+    <nav class="footer-nav" v-if="!isMobile">
       <ul class="navigation-list">
         <li class="__item __subtitle -light" @click="callToWeAre">
           we are
@@ -40,6 +40,12 @@
 <script>
 export default {
   name: 'PageFooter',
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
+  },
   methods: {
     callToWeAre() {
       this.$emit('anchorWeAre');

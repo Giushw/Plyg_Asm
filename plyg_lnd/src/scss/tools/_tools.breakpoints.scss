@@ -1,5 +1,5 @@
 /**
-* BreackPoints
+* Breakpoints
 */
 
 $breakpoints: (
@@ -11,18 +11,13 @@ $breakpoints: (
     large-l : $breakpoint__large-l      // 1200px
 );
 
-/// Mixin to manage responsive breakpoints
-/// modded by  @author Hugo Giraudel
 
 @mixin on-vp($breakpoint) {
-  // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
   }
-  // If the key doesn't exist in the map
   @else {
     @warn "No value found for `#{$breakpoint}`. "
           + "Available breakpoints are: #{map-keys($breakpoints)}.";
@@ -30,14 +25,11 @@ $breakpoints: (
 }
 
 @mixin on-vp-max($breakpoint) {
-  // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
     @media (max-width: map-get($breakpoints, $breakpoint) - 1) {
       @content;
     }
   }
-  // If the key doesn't exist in the map
   @else {
     @warn "No value found for `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";

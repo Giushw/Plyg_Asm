@@ -25,8 +25,11 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 40px;
-  // background: rgba(00, 00, 00, 0.5);
+  padding: 20px;
+
+  @include on-vp('medium') {
+    padding: 40px;
+  }
 }
 
 .header-logo {
@@ -42,6 +45,10 @@
 
 .header-nav {
   display: flex;
+
+  @include on-vp-max('large') {
+    display: none;
+  }
 
   & .navigation-list {
     color: $color__secondary;

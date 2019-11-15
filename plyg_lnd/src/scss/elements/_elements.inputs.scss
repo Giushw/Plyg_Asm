@@ -21,6 +21,6 @@ input, textarea {
   }
 
   &::placeholder {
-    color: $color__text;
+    color: rgba($color__text--white, .8);
   }
 }

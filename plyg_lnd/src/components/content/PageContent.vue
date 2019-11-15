@@ -1,10 +1,20 @@
 <template>
   <section class="page-content">
-    <slideshow/>
-    <cards/>
-    <banners/>
-    <infos />
-    <contacts />
+    <slideshow
+      :isMobile="isMobile"
+    />
+    <cards
+      :isMobile="isMobile"
+    />
+    <banners
+      :isMobile="isMobile"
+    />
+    <infos
+      :isMobile="isMobile"
+    />
+    <contacts
+      :isMobile="isMobile"
+    />
   </section>
 </template>
 
@@ -23,6 +33,12 @@ export default {
     banners,
     infos,
     contacts,
+  },
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
   },
 };
 </script>

@@ -1,19 +1,25 @@
 <template>
   <div class="page-wrap">
     <PageHeader
+      :isMobile="isMobile"
       @anchorWeAre="moveToWeAre"
       @anchorWeDo="moveToWeDo"
       @anchorCareers="moveToCareers"
       @anchorContacts="moveToContacts"
     />
-    <PageContent/>
+    <PageContent
+      :isMobile="isMobile"
+    />
     <PageFooter
+      :isMobile="isMobile"
       @anchorWeAre="moveToWeAre"
       @anchorWeDo="moveToWeDo"
       @anchorCareers="moveToCareers"
       @anchorContacts="moveToContacts"
     />
-    <Cookies/>
+    <Cookies
+      :isMobile="isMobile"
+    />
   </div>
 </template>
 
@@ -30,6 +36,14 @@ export default {
     PageContent,
     PageFooter,
     Cookies,
+  },
+  computed: {
+    isMobile() {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        return true;
+      }
+      return false;
+    },
   },
   methods: {
     moveToWeAre() {

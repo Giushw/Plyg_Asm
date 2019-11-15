@@ -26,15 +26,27 @@
   padding: 10px;
 
   & .__btn {
-    width: 100px;
-    height: 30px;
-    padding: 8px;
-    font-size: 10px;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    font-size: 1rem;
+    align-self: flex-end;
+    
+    @include on-vp('medium') {
+      width: 100px;
+      height: 30px;
+      font-size: 0.625rem;
+      padding: 8px;
+    }
   }
 }
 
 .cookie-disclaimer {
-  margin-right: 30px;
+  margin-bottom: 10px;
+
+  @include on-vp('medium') {
+    margin: 0 30px 0 0;
+  }
 
   & > .__link {
     &:hover {

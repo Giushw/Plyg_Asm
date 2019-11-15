@@ -2,15 +2,6 @@
 * Mixins
 */
 
-// Clear the previous float
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
 // Cancel tap Highlight on mobile
 @mixin no-highlight{
   -webkit-tap-highlight-color: transparent;
