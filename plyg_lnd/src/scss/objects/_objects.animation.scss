@@ -2,40 +2,6 @@
 * Animations
 */
 
-// Slide-fade Sx-Dx 
-.slide-fade-enter-active {
-    transition: all .25s ease-in-out;
-}
-
-.slide-fade-leave-active {
-    transition: all .5s ease-in-out;
-}
-
-.slide-fade-enter, .slide-fade-leave-to {
-    transform: translateX(5px);
-    opacity: 0;
-}
-
-// Dissolve
-.dissolve-enter-active {
-  animation: dissolve .4s;
-}
-.dissolve-leave-active {
-  animation: dissolve .3s reverse;
-}
-
-@keyframes dissolve {
-  0% {
-    opacity: .1;
-  }
-  50% {
-    opacity: .7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 // Fade-in In-Out
 .fade-in-enter-active {
     transition: all .3s ease-in-out;
@@ -48,23 +14,22 @@
 .fade-in-enter, .fade-in-leave-to {
     opacity: 0;
 }
-
+// Ripple
 .-rippledWaved {
   animation: rippleWave 0.6s linear infinite;
 }
 
-$color: $color__gray--dark;
 @keyframes rippleWave {
   0% {
-    box-shadow: 0 0 0 0 rgba($color, 0.1),
-                0 0 0 20px rgba($color, 0.1),
-                0 0 0 40px rgba($color, 0.1),
-                0 0 0 60px rgba($color, 0.1);
+    box-shadow: 0 0 0 0 rgba($color__ripple, 0.1),
+                0 0 0 20px rgba($color__ripple, 0.1),
+                0 0 0 40px rgba($color__ripple, 0.1),
+                0 0 0 60px rgba($color__ripple, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 20px rgba($color, 0.1),
-                0 0 0 40px rgba($color, 0.1),
-                0 0 0 60px rgba($color, 0.1),
-                0 0 0 80px rgba($color, 0);
+    box-shadow: 0 0 0 20px rgba($color__ripple, 0.1),
+                0 0 0 40px rgba($color__ripple, 0.1),
+                0 0 0 60px rgba($color__ripple, 0.1),
+                0 0 0 80px rgba($color__ripple, 0);
   }
 }

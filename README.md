@@ -24,18 +24,12 @@ Then you can choose 2 ways:
 
 ## Add-on
 Here a little list:
-- VueCli;
-(https://cli.vuejs.org/)
-- Vue Carousel;
-(https://ssense.github.io/vue-carousel/)
--Vuelidate;
-(https://vuelidate.js.org/#getting-started)
-- Font Awsome + Vue wrapper;
-(https://fontawesome.com/)
-(https://www.npmjs.com/package/@fortawesome/vue-fontawesome)
-- Axios;
-(https://github.com/axios/axios)
-- Cooke.js;
-(https://github.com/js-cookie/js-cookie)
+- VueCli (https://cli.vuejs.org/);
+- Vue Carousel (https://ssense.github.io/vue-carousel/);
+- Vuelidate (https://vuelidate.js.org/#getting-started);
+- Font Awsome (https://fontawesome.com/);
+- Plus its Vue wrapper (https://www.npmjs.com/package/@fortawesome/vue-fontawesome);
+- Axios (https://github.com/axios/axios);
+- Cooke.js (https://github.com/js-cookie/js-cookie);
 
 #### Enjoy!

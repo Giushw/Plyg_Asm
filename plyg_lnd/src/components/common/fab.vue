@@ -1,7 +1,7 @@
 <template>
   <div class="fab-container">
-    <div class="radial-wrapper"
-      :class="{ 'is-open': openFab }"
+    <div class="radial-wrapper "
+      :class="{ 'is-open': openFab, '-rippledWaved': !openFab }"
     >
       <font-awesome-icon id="fabFirstBtn"
         :icon="['fas', 'id-card-alt']"
@@ -27,11 +27,10 @@
         @click="callToContacts"
       >
       </font-awesome-icon>
-      <button class="fab-btn">
-        <font-awesome-icon id="plus"
+      <button class="fab-btn" @click="toggleFab">
+        <font-awesome-icon id="direction"
           :icon="['fas', 'location-arrow']"
           size="2x"
-          @click="toggleFab"
         >
         </font-awesome-icon>
       </button>

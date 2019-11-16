@@ -36,12 +36,31 @@
   
   &.-play {
     background: url('../assets/images/card-play-harder.png') center no-repeat;
-    // background-size: cover;
+    
+    @include on-vp('small') {
+      background-size: cover;
+    }
+
+    @include on-vp('medium') {
+      background-size: unset;
+    }
   }
 
   &.-simply {
     background: url('../assets/images/card-simplicity.png') left -35px center no-repeat;
 
+    @include on-vp('small-xs') {
+      background-position-x: -15px;
+    }
+
+    @include on-vp('small-xs') {
+      background-position-x: 0px;
+    }
+
+    @include on-vp('small') {
+      background-size: cover;
+    }
+    
     @include on-vp('medium') {
       background: url('../assets/images/card-simplicity.png') left center no-repeat;
     }
@@ -49,6 +68,14 @@
 
   &.-inno {
     background: url('../assets/images/card-innovation.png') center no-repeat;
+    
+    @include on-vp('small-s') {
+      background-size: cover;
+    }
+
+    @include on-vp('medium') {
+      background-size: unset;
+    }
   }
 }
 

@@ -23,4 +23,6 @@ $breakpoint__large: 1024px;
 $breakpoint__large-l: 1200px;
 
 // Fab
-$fab__icon-dim: 20px;
+$fab__btn-dim: 75px;
+$fab__radial-dim: $fab__btn-dim * 4;
+$fab__icon-dim: 18px;

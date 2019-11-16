@@ -13,10 +13,20 @@
 
   & > .__item {
     padding: 5px;
-    transition: background-color 0.5s ease-in-out;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $color__secondary;
+        transition: width .3s ease-in-out;
+    }
 
     &:hover {
-      background-color: $color__gray;
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
