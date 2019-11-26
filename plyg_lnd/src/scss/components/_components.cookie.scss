@@ -30,13 +30,24 @@
     height: 45px;
     padding: 5px;
     font-size: 1rem;
-    align-self: flex-end;
+    
+    @include on-vp-max('medium') {
+      align-self: flex-end;
+    }
     
     @include on-vp('medium') {
       width: 100px;
       height: 30px;
       font-size: 0.625rem;
       padding: 8px;
+    }
+  }
+
+  & .grid-column {
+    @include on-vp('medium') {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

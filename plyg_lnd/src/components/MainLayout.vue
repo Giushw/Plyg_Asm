@@ -46,6 +46,21 @@ export default {
     Cookies,
     Fab,
   },
+  data() {
+    return {
+      window: {
+        width: 0,
+        height: 0,
+      },
+    };
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   computed: {
     isMobile() {
       if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -55,6 +70,10 @@ export default {
     },
   },
   methods: {
+    handleResize() {
+      this.window.width = window.innerWidth;
+      this.window.height = window.innerHeight;
+    },
     moveToWeAre() {
       document.getElementById('weare').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     },

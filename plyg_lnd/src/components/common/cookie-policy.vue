@@ -5,7 +5,7 @@
   >
     <div class="cookie-wrapper grid-wrapper">
       <div class="grid-row">
-        <div class="grid-column -ninety">
+        <div class="grid-column">
           <p class="cookie-disclaimer"
             :class="{ '-tiny': !isMobile }"
           >
@@ -14,15 +14,15 @@
             <a href="https://www.playground.it/%20/www.iubenda.com/privacy-policy/43977578/cookie-policy?an=no&s_ck=false"
               class="__link"
             >
-              Cookie Policy
+              Cookie Policy.
             </a>
-            .
           </p>
-        </div>
-        <div class="grid-column">
           <button class="__btn"
             :class="{'-small': !isMobile}"
-            @click="acceptCookies">Ok</button>
+            @click="acceptCookies"
+          >
+            Ok
+          </button>
         </div>
       </div>
     </div>

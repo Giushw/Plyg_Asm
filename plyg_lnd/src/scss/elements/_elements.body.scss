@@ -11,7 +11,23 @@ body {
   line-height: $line-height--base;
   letter-spacing: normal;
   min-height: 100%;
+
+  /*
+    Responsive fontsize
+  */
+  @include on-vp-max('large') {
+    font-size: $font__size--tablet;
+    line-height: $line-height--tablet;
+  };
+
+  @include on-vp-max('medium') {
+    font-size: $font__size--mobile;
+    line-height: $line-height--mobile;
+  };
+
 }
+
+
 
 html {
   -ms-text-size-adjust: 100%;
