@@ -20,6 +20,11 @@
 
         & .banner-info {
           @include on-vp('medium') {
+            padding: 0 20px 0 0;
+            color: $color__primary;
+          }
+          
+          @include on-vp('large') {
             padding: 0 100px 0 0;
             color: $color__primary;
           }
@@ -107,7 +112,7 @@
     & > .__title {
       width: 100%;
 
-      @include on-vp('medium') {
+      @include on-vp('large') {
         width: 60%;
       }
     }

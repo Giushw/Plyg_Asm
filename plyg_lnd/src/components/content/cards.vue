@@ -2,7 +2,7 @@
   <div class="cards-wrapper">
     <div class="grid-wrapper ">
       <div class="grid-row -padded -stretched"
-        :class="[isMobile ? '': '-gutted']"
+        :class="[( deviceType === 'mobile') ? '': '-gutted']"
       >
         <SingleCard v-for="card in infoCards" :key="card.id"
           class="grid-column"
@@ -23,8 +23,8 @@ export default {
     SingleCard,
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

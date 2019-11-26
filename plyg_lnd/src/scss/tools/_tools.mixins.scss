@@ -19,6 +19,7 @@
     @content;
   }
 }
+
 // Taget only Edge browsers
 @mixin Edge-fix {
   @supports (-ms-ime-align:auto) {

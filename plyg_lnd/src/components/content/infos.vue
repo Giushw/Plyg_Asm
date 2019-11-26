@@ -65,8 +65,8 @@ export default {
     };
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },
@@ -77,7 +77,7 @@ export default {
       .then((response) => {
         setTimeout(() => {
           this.loading = false;
-        }, 3000);
+        }, 2500);
         this.info = response.data;
       })
       .catch((e) => {
@@ -130,7 +130,7 @@ export default {
           console.log(e.message);
         });
 
-      if (this.isMobile) {
+      if (this.deviceType === 'mobile') {
         document.getElementById('infoText').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
       }
     },

@@ -27,7 +27,7 @@
   width: 100%;
   padding: 20px;
 
-  @include on-vp('medium') {
+  @include on-vp('large') {
     padding: 40px;
   }
 }
@@ -46,7 +46,12 @@
 .header-nav {
   display: flex;
 
-  @include on-vp-max('large') {
+  @include on-vp('small') {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  @include on-vp-max('small') {
     display: none;
   }
 
@@ -54,8 +59,12 @@
     color: $color__secondary;
 
     & > .__item {
-      padding: 0 30px;
+      padding: 0 15px;
       cursor: pointer;
+
+      @include on-vp('large') {
+        padding: 0 30px;
+      }
     }
   }
 }

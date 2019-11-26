@@ -10,14 +10,16 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  padding: 20px;
+  padding: 30px 20px;
   background-color: $color__primary;
   color: $color__secondary;
   border-top: 2px solid $color__gray--dark;
 
+  @include on-vp('small') {
+    align-items: center;
+  }
 
   @include on-vp('medium') {
-    align-items: center;
     padding: 50px;
   }
 }
@@ -38,7 +40,12 @@
 }
 
 .footer-nav {
-  margin-bottom: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  
+  @include on-vp('medium') {
+    margin-bottom: 50px;
+  }
 
   & .navigation-list {
     & > .__item {

@@ -4,18 +4,20 @@
 
 // Fonts
 $font__main: 'Gotham', sans-serif;
-$font__size--base: 16px !default;
-$font__size--tablet: 15px !default;
-$font__size--mobile: 14px !default;
-$line-height--base: 1.4 !default;
-$line-height--tablet: 1.3 !default;
-$line-height--mobile: 1.2 !default;
+$font__size-base: 16px !default;
+$font__size-tablet: 15px !default;
+$font__size-mobile: 14px !default;
+$line-height-base: 1.4 !default;
+$line-height-tablet: 1.3 !default;
+$line-height-mobile: 1.2 !default;
 
 // Grid
 $grid__max-width: 1440px;
 $grid__marging: 150px;
+$grid__marging-tablet: 50px;
 $grid__marging-mobile: 15px;
 $grid__gutter: 30px;
+$grid__gutter-mobile: 50px;
 $grid__gutter-mobile: 15px;
 
 // BreakPoints

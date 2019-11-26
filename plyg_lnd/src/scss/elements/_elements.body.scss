@@ -7,8 +7,8 @@ body {
   background: $color__secondary;
   color: $color__text;
   font-family: $font__main;
-  font-size: $font__size--base;
-  line-height: $line-height--base;
+  font-size: $font__size-base;
+  line-height: $line-height-base;
   letter-spacing: normal;
   min-height: 100%;
 
@@ -16,18 +16,15 @@ body {
     Responsive fontsize
   */
   @include on-vp-max('large') {
-    font-size: $font__size--tablet;
-    line-height: $line-height--tablet;
+    font-size: $font__size-tablet;
+    line-height: $line-height-tablet;
   };
 
   @include on-vp-max('medium') {
-    font-size: $font__size--mobile;
-    line-height: $line-height--mobile;
+    font-size: $font__size-mobile;
+    line-height: $line-height-mobile;
   };
-
 }
-
-
 
 html {
   -ms-text-size-adjust: 100%;

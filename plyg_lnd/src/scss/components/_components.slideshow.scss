@@ -6,6 +6,10 @@
   position: relative;
 
   @include on-vp-max('medium') {
+    padding-top: 90px;
+  }
+
+  @include on-vp-max('small') {
     padding-top: 65px;
   }
 
@@ -22,11 +26,18 @@
 
   @include on-vp('medium') {
     position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 30%;
+  }
+
+  @include on-vp('large') {
+    position: absolute;
     top: 35%;
     left: 22%;
     width: 15%;
   }
-
+  
   @include on-vp-max('medium') {
     padding: 15px;
   }
@@ -37,8 +48,11 @@
     text-align: right;
 
     @include on-vp('medium') {
-      margin-bottom: 40px;
       text-align: left;
+    }
+
+    @include on-vp('large') {
+      margin-bottom: 40px;
     }
   }
 

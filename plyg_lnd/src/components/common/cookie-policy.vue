@@ -7,7 +7,7 @@
       <div class="grid-row">
         <div class="grid-column">
           <p class="cookie-disclaimer"
-            :class="{ '-tiny': !isMobile }"
+            :class="{ '-tiny': deviceType === 'desktop' }"
           >
             Our website uses cookies to improve your experience.
             To find out more about the cookie we use please se our
@@ -18,7 +18,7 @@
             </a>
           </p>
           <button class="__btn"
-            :class="{'-small': !isMobile}"
+            :class="{'-small': deviceType !== 'mobile'}"
             @click="acceptCookies"
           >
             Ok
@@ -40,8 +40,8 @@ export default {
     };
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

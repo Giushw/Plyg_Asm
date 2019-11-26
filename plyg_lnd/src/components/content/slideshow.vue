@@ -5,7 +5,7 @@
         :per-page="1"
         :loop="true"
         :navigationEnabled="true"
-        :paginationEnabled="!isMobile"
+        :paginationEnabled=" deviceType !== 'mobile'"
         paginationActiveColor="#ffffff"
         paginationColor="#706e68"
         paginationPosition="bottom-overlay"
@@ -34,13 +34,11 @@
         </slide>
       </carousel>
       <div class="slideshow-titlegroup">
-        <h1 class="__title"
-          :class="[isMobile ? '-huge' : '-ginormous']"
-        >
+        <h1 class="__title -ginormous">
           {{ title }}
         </h1>
         <h5 class="__subtitle"
-          :class="{'-light': isMobile}"
+          :class="{'-light': deviceType === 'mobile'}"
         >
           {{ subtitle }}
         </h5>
@@ -61,8 +59,8 @@ export default {
     };
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

@@ -1,31 +1,31 @@
 <template>
   <div class="page-wrap">
     <PageHeader
-      :isMobile="isMobile"
+      :deviceType="deviceType"
       @anchorWeAre="moveToWeAre"
       @anchorWeDo="moveToWeDo"
       @anchorCareers="moveToCareers"
       @anchorContacts="moveToContacts"
     />
     <PageContent
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
     <Fab
-      v-if="isMobile"
+      v-if="deviceType === 'mobile'"
       @anchorWeAre="moveToWeAre"
       @anchorWeDo="moveToWeDo"
       @anchorCareers="moveToCareers"
       @anchorContacts="moveToContacts"
     />
     <PageFooter
-      :isMobile="isMobile"
+      :deviceType="deviceType"
       @anchorWeAre="moveToWeAre"
       @anchorWeDo="moveToWeDo"
       @anchorCareers="moveToCareers"
       @anchorContacts="moveToContacts"
     />
     <Cookies
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
   </div>
 </template>
@@ -50,7 +50,6 @@ export default {
     return {
       window: {
         width: 0,
-        height: 0,
       },
     };
   },
@@ -62,17 +61,22 @@ export default {
     window.removeEventListener('resize', this.handleResize);
   },
   computed: {
-    isMobile() {
-      if (/Mobi|Android/i.test(navigator.userAgent)) {
-        return true;
+    deviceType() {
+      if (this.window.width >= 320 && this.window.width <= 560) {
+        return 'mobile';
       }
-      return false;
+      if (this.window.width >= 561 && this.window.width <= 1024) {
+        return 'tablet';
+      }
+      if (this.window.width >= 1025) {
+        return 'desktop';
+      }
+      return 'mobile';
     },
   },
   methods: {
     handleResize() {
       this.window.width = window.innerWidth;
-      this.window.height = window.innerHeight;
     },
     moveToWeAre() {
       document.getElementById('weare').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });

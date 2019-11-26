@@ -1,19 +1,19 @@
 <template>
   <section class="page-content">
     <slideshow
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
     <cards
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
     <banners
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
     <infos
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
     <contacts
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
   </section>
 </template>
@@ -35,8 +35,8 @@ export default {
     contacts,
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

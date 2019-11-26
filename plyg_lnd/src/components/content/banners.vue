@@ -7,7 +7,7 @@
       :subtitle="banner.subtitle"
       :cta="banner.cta"
       :direction="banner.direction"
-      :isMobile="isMobile"
+      :deviceType="deviceType"
     />
   </div>
 </template>
@@ -21,8 +21,8 @@ export default {
     TwoThirdBanner,
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

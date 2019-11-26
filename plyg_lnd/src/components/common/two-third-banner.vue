@@ -6,7 +6,7 @@
       '-careers': image === 'careers',
     }"
   >
-    <div class="grid-row" :class="{'-inverted': direction === 'ltr' && !isMobile}">
+    <div class="grid-row" :class="{'-inverted': direction === 'ltr' && deviceType !== 'mobile'}">
       <div class="grid-column -sixty">
         <div class="banner-image">
         </div>
@@ -20,7 +20,10 @@
             {{ subtitle }}
           </h4>
           <button class="__btn -cta -outline"
-            :class="{'-inverted': direction === 'ltr' && !isMobile, '-full': isMobile}"
+            :class="{
+              '-inverted': direction === 'ltr' && deviceType === 'desktop',
+              '-full': deviceType === 'mobile'
+            }"
           >
             {{ cta }}
             <font-awesome-icon :icon="['fas', 'angle-right']"></font-awesome-icon>
@@ -55,8 +58,8 @@ export default {
       type: String,
       defautl: 'rtl',
     },
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

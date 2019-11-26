@@ -43,8 +43,12 @@
   &.-padded {
     padding: 0 $grid__marging-mobile;
 
-    @include on-vp('medium') {
+    @include on-vp('large') {
       padding: 0 $grid__marging;
+    }
+
+    @include on-vp('medium') {
+      padding: 0 $grid__marging-tablet;
     }
   }
 

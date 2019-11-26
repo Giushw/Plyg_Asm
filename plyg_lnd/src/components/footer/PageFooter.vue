@@ -6,7 +6,7 @@
         class="__img"
       >
     </picture>
-    <nav class="footer-nav" v-if="!isMobile">
+    <nav class="footer-nav" v-if=" deviceType !== 'mobile'">
       <ul class="navigation-list">
         <li class="__item __subtitle -light" @click="callToWeAre">
           we are
@@ -41,8 +41,8 @@
 export default {
   name: 'PageFooter',
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

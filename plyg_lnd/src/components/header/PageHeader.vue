@@ -6,14 +6,20 @@
     }"
   >
     <div class="header-wrapper grid-wrapper">
-      <div class="grid-row -padded" :class="{'-gutted': !isMobile}">
-        <div class="grid-column" :class="{'-center': isMobile}">
+      <div class="grid-row -padded" :class="{'-gutted': deviceType === 'desktop'}">
+        <div class="grid-column" :class="{
+          '-center': deviceType !== 'desktop',
+          '-thirty': deviceType === 'tablet'
+          }"
+        >
           <picture class="header-logo">
             <img src="../../assets/images/logo-playground-white.png"
               alt="Playground Logo" class="__img">
           </picture>
         </div>
-        <div class="grid-column" v-if="!isMobile">
+        <div class="grid-column" v-if="deviceType !== 'mobile'"
+          :class="{'-seventy': deviceType === 'tablet'}"
+        >
           <nav class="header-nav">
             <ul class="navigation-list">
               <li class="__item" @click="callToWeAre">
@@ -42,12 +48,12 @@ export default {
   data() {
     return {
       scrollPosition: null,
-      slideshowHeight: this.isMobile ? 62 : 798,
+      slideshowHeight: (this.deviceType === 'mobile') ? 62 : 798,
     };
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },

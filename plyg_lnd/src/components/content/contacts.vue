@@ -19,7 +19,7 @@
         <div class="grid-column -sixtyFive">
           <form class="contacts-form">
             <div class="grid-row"
-              :class="[isMobile ? '': '-gutted']"
+              :class="[(deviceType === 'desktop') ? '-gutted': '']"
             >
               <div class="grid-column">
                 <div class="input-wrapper"
@@ -142,7 +142,7 @@
                     v-if="$v.message.$dirty && !$v.message.required"
                     class="error-msg"
                   >
-                    Mmessage needed
+                    Message needed
                   </div>
                   <div
                     v-if="!$v.message.minLength"
@@ -154,7 +154,7 @@
               </div>
             </div>
             <button class="__btn -inverted"
-              :class="[isMobile ? '-full': '']"
+              :class="[(deviceType === 'desktop') ? '': '-full']"
             >
               Send
               <font-awesome-icon :icon="['fas', 'angle-right']"></font-awesome-icon>
@@ -188,8 +188,8 @@ export default {
     };
   },
   props: {
-    isMobile: {
-      type: Boolean,
+    deviceType: {
+      type: String,
       required: true,
     },
   },
