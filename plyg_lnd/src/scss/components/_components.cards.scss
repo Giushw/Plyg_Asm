@@ -72,6 +72,9 @@
     @include on-vp('medium') {
       background: url('../assets/images/card-simplicity.png') left -80px center no-repeat;
     }
+    @include on-vp('large') {
+      background: url('../assets/images/card-simplicity.png') left -40px center no-repeat;
+    }
   }
 
   &.-inno {
@@ -92,10 +95,10 @@
   padding: 30px;
 
   @include on-vp('medium') {
-    // padding: 40px;
+    padding: 40px;
   }
 
-  @include on-vp('large') {
+  @include on-vp('large-l') {
     padding: 40px 50px;
   }
 

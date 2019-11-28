@@ -2,7 +2,9 @@
   <div id="contacts" class="contacts-wrapper">
     <div class="grid-wrapper">
       <div class="grid-row -padded">
-        <div class="grid-column -thirtyFive">
+        <div class="grid-column"
+          :class="{'-thirtyFive': deviceType === 'desktop', '-fourtyFive': deviceType === 'tablet'}"
+        >
           <div class="contacs-info">
             <div class="__title -ginormous">
               contact us.
@@ -23,7 +25,7 @@
             >
               <div class="grid-column">
                 <div class="input-wrapper"
-                  :class="{ 'has-error': $v.name.$error }"
+                  :class="{ 'has-error': $v.name.$error, '-spaced': deviceType === 'tablet' }"
                 >
                   <input
                     v-model.trim="$v.name.$model"

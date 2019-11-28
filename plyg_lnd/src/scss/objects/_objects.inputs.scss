@@ -7,6 +7,12 @@
   display: flex;
   flex-direction: column;
 
+  &.-spaced {
+    & > .__input {
+      margin-right: 10px;
+    }
+  }
+
   &.has-error {
     & > .__input {
       margin-bottom: 0;

@@ -7,6 +7,10 @@
   padding: 30px 0;
 
   @include on-vp('medium') {
+    padding: 50px 0;
+  }
+
+  @include on-vp('large') {
     padding: 80px 0;
   }
 
@@ -39,7 +43,11 @@
 
   @include on-vp('medium') {
     justify-content: flex-start;
-    padding: 25px 75px;
+  }
+
+  @include on-vp('large') {
+    justify-content: center;
+    padding: 25px;
   }
 
   &:hover {
@@ -75,6 +83,10 @@
 
   @include on-vp('medium') {
     min-height: 350px;
+    padding: 50px;
+  }
+
+  @include on-vp('large') {
     padding: 50px 90px;
   }
 }

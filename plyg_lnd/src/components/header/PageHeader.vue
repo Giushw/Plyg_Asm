@@ -6,7 +6,7 @@
     }"
   >
     <div class="header-wrapper grid-wrapper">
-      <div class="grid-row -padded" :class="{'-gutted': deviceType === 'desktop'}">
+      <div class="grid-row" :class="{'-gutted': deviceType !== 'desktop'}">
         <div class="grid-column" :class="{
           '-center': deviceType !== 'desktop',
           '-thirty': deviceType === 'tablet'
@@ -18,7 +18,7 @@
           </picture>
         </div>
         <div class="grid-column" v-if="deviceType !== 'mobile'"
-          :class="{'-seventy': deviceType === 'tablet'}"
+          :class="{'-seventy': deviceType !== 'mobile'}"
         >
           <nav class="header-nav">
             <ul class="navigation-list">
@@ -48,13 +48,26 @@ export default {
   data() {
     return {
       scrollPosition: null,
-      slideshowHeight: (this.deviceType === 'mobile') ? 62 : 798,
     };
   },
   props: {
     deviceType: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    slideshowHeight() {
+      if (this.deviceType === 'mobile') {
+        return 62;
+      }
+      if (this.deviceType === 'tablet') {
+        return 425;
+      }
+      if (this.deviceType === 'desktop') {
+        return 580;
+      }
+      return 62;
     },
   },
   mounted() {

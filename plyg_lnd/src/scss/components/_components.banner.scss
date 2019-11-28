@@ -20,13 +20,12 @@
 
         & .banner-info {
           @include on-vp('medium') {
-            padding: 0 20px 0 0;
+            padding: 0 40px 0 0;
             color: $color__primary;
           }
           
-          @include on-vp('large') {
+          @include on-vp('large-l') {
             padding: 0 100px 0 0;
-            color: $color__primary;
           }
         }
       }
@@ -91,8 +90,15 @@
   color: $color__secondary;
 
   @include on-vp('medium') {
-    padding: 0 0 0 100px;
     padding: 40px 20px;
+  }
+
+  @include on-vp('large') {
+    padding: 0 0 0 40px;
+  }
+
+  @include on-vp('large-l') {
+    padding: 0 0 0 100px;
   }
 
   & > .__title, & > .__subtitle {
@@ -111,10 +117,6 @@
   .-careers & {
     & > .__title {
       width: 100%;
-
-      @include on-vp('large') {
-        width: 60%;
-      }
     }
   }
 

@@ -28,7 +28,11 @@
   padding: 20px;
 
   @include on-vp('large') {
-    padding: 40px;
+    padding: 40px 50px;
+  }
+  
+  @include on-vp('large-l') {
+    padding: 40px 150px;
   }
 }
 
@@ -51,18 +55,23 @@
     padding: 10px;
   }
 
+  @include on-vp('medium') {
+    justify-content: flex-end;
+  }
+
   @include on-vp-max('small') {
     display: none;
   }
 
   & .navigation-list {
+    // width: 100%;
     color: $color__secondary;
 
     & > .__item {
       padding: 0 15px;
       cursor: pointer;
 
-      @include on-vp('large') {
+      @include on-vp('large-l') {
         padding: 0 30px;
       }
     }

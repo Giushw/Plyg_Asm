@@ -43,12 +43,12 @@
   &.-padded {
     padding: 0 $grid__marging-mobile;
 
-    @include on-vp('large') {
-      padding: 0 $grid__marging;
-    }
-
     @include on-vp('medium') {
       padding: 0 $grid__marging-tablet;
+    }
+
+    @include on-vp('large-l') {
+      padding: 0 $grid__marging;
     }
   }
 
@@ -81,8 +81,8 @@
   }
 }
 
-$widthPerc: (
-    twenty : 2,
+$widthPerc: (           // these represent percentual %
+    twenty : 2,         // 2 => 20, ecc.
     twentyFive : 2.5,
     thirty : 3,
     thirtyFive : 3.5,

@@ -47,7 +47,24 @@
     margin-bottom: 50px;
   }
 
+  @include on-vp('large') {
+    display: flex;
+    justify-content: center;
+  }
+
   & .navigation-list {
+    @include on-vp('medium') {
+      justify-content: space-evenly;
+
+      @include Edge-fix {
+        justify-content: space-around;
+      }
+
+      @include IE-fix {
+        justify-content: space-around;
+      }
+    }
+
     & > .__item {
       padding: 5px 35px;
     }

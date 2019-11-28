@@ -6,8 +6,11 @@
   padding: 20px 0;
 
   @include on-vp('medium') {
+  padding: 50px 0;
+  }
+
+  @include on-vp('large') {
   padding: 100px 0;
-    
   }
 }
 
@@ -17,8 +20,12 @@
   justify-content: space-between;
   color: $color__secondary;
   
-  @include on-vp('medium') {
-    padding-left: 100px;
+  @include on-vp('large') {
+    padding-left: 60px;
+  }
+  
+  @include on-vp('large-l') {
+    padding-left: 40px;
   }
 
   & > .__title {
@@ -40,13 +47,23 @@
 
 .contacts-form {
   display: flex;
-  
+
   @include on-vp('medium') {
-    padding: 0 100px 0 30px;
+    padding: 0 0 0 10px;
+  }
+  
+  @include on-vp('large') {
+    padding: 0 50px 0 50px;
+  }
+
+  @include on-vp('large-l') {
+    padding: 0 0 0 50px;
   }
 
   & > .__btn {
     min-width: 160px;
     min-height: 40px;
   }
+
+
 }
