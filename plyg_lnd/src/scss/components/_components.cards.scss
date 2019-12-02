@@ -94,11 +94,7 @@
   width: 100%;
   padding: 30px;
 
-  @include on-vp('medium') {
-    padding: 40px;
-  }
-
-  @include on-vp('large-l') {
+  @include on-vp('large') {
     padding: 40px 50px;
   }
 

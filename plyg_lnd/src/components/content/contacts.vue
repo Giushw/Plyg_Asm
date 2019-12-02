@@ -98,7 +98,7 @@
                     class="__input"
                     :class="{
                       '-error': ($v.email.$dirty && !$v.email.required)
-                        | ($v.email.$dirty && !$v.email.email),
+                              | ($v.email.$dirty && !$v.email.email),
                       '-success' : $v.email.$dirty && $v.email.email
                     }"
                     required
@@ -133,7 +133,7 @@
                     class="__input"
                     :class="{
                       '-error': ($v.message.$dirty && !$v.message.required)
-                        | ($v.message.$dirty && !$v.message.minLength),
+                              | ($v.message.$dirty && !$v.message.minLength),
                       '-success' : $v.message.$dirty && $v.message.minLength
                     }"
                     required

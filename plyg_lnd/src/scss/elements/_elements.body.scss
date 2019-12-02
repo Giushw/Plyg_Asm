@@ -12,9 +12,8 @@ body {
   letter-spacing: normal;
   min-height: 100%;
 
-  /*
-    Responsive fontsize
-  */
+  
+  //  Responsive fontsize
   @include on-vp-max('large') {
     font-size: $font__size-tablet;
     line-height: $line-height-tablet;

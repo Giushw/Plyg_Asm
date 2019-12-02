@@ -23,7 +23,6 @@
       </ul>
     </nav>
     <article class="footer-socials">
-      <!-- <font-awesome-icon :icon="['fas', 'circle-notch']"></font-awesome-icon> -->
       <a href="https://www.facebook.com/playground.digital.agency" class="social-link">
         <font-awesome-icon class="__icon" :icon="['fab', 'facebook-square']" ></font-awesome-icon>
       </a>
